@@ -1,2 +1,2 @@
-# Moore.io Hopper Template
-Moore.io's Hopper Repository Template
+# Moore.io RISC-V Hopper
+Moore.io's hopper of RISC-V IP, VIP & Script packages.
