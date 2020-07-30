@@ -16,51 +16,51 @@
 // 
 
 
-`ifndef __UVML_RISCV_CSR_MACHINE_TRAP_SETUP_MIDELEG_REG_SV__
-`define __UVML_RISCV_CSR_MACHINE_TRAP_SETUP_MIDELEG_REG_SV__
+`ifndef __UVML_RISCV_CSR_MACHINE_TRAP_SETUP_MEDELEG_REG_SV__
+`define __UVML_RISCV_CSR_MACHINE_TRAP_SETUP_MEDELEG_REG_SV__
 
 
 /**
- * RISC-V Hart ID Register.
+ * RISC-V Machine Exception Delegation Register.
  */
-class uvml_riscv_csr_machine_trap_setup_mideleg_reg_c#(
+class uvml_riscv_csr_machine_trap_setup_medeleg_reg_c#(
    int unsigned XLEN = 32
 ) extends uvml_riscv_csr_ext_base_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  interrupts;
+   rand uvml_ral_reg_field  synchronous_exceptions;
    
    
-   `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_setup_mideleg_reg_c#(.XLEN(XLEN)))
-      `uvm_field_object(interrupts, UVM_DEFAULT)
+   `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_setup_medeleg_reg_c#(.XLEN(XLEN)))
+      `uvm_field_object(synchronous_exceptions, UVM_DEFAULT)
    `uvm_object_utils_end
    
    
    /**
     * Default constructor.
     */
-   extern function new(string name="uvml_riscv_csr_machine_trap_setup_mideleg_reg", int unsigned n_bits=XLEN, int has_coverage=UVM_NO_COVERAGE);
+   extern function new(string name="uvml_riscv_csr_machine_trap_setup_medeleg_reg", int unsigned n_bits=XLEN, int has_coverage=UVM_NO_COVERAGE);
    
    /**
     * Create and configure register fields.
     */
    extern virtual function void build();
    
-endclass : uvml_riscv_csr_machine_trap_setup_mideleg_reg_c
+endclass : uvml_riscv_csr_machine_trap_setup_medeleg_reg_c
 
 
-function uvml_riscv_csr_machine_trap_setup_mideleg_reg_c::new(string name="uvml_riscv_csr_machine_trap_setup_mideleg_reg", int unsigned n_bits=XLEN, int has_coverage=UVM_NO_COVERAGE);
+function uvml_riscv_csr_machine_trap_setup_medeleg_reg_c::new(string name="uvml_riscv_csr_machine_trap_setup_medeleg_reg", int unsigned n_bits=XLEN, int has_coverage=UVM_NO_COVERAGE);
    
    super.new(name, n_bits, has_coverage);
    
 endfunction : new
 
 
-function void uvml_riscv_csr_machine_trap_setup_mideleg_reg_c::build();
+function void uvml_riscv_csr_machine_trap_setup_medeleg_reg_c::build();
    
-   interrupts = uvml_ral_reg_field::type_id::create("interrupts");
-   interrupts.configure(
+   synchronous_exceptions = uvml_ral_reg_field::type_id::create("synchronous_exceptions");
+   synchronous_exceptions.configure(
       .parent                 (this),
       .size                   (XLEN),
       .lsb_pos                (   0),
@@ -75,4 +75,4 @@ function void uvml_riscv_csr_machine_trap_setup_mideleg_reg_c::build();
 endfunction: build
 
 
-`endif // __UVML_RISCV_CSR_MACHINE_TRAP_SETUP_MIDELEG_REG_SV__
+`endif // __UVML_RISCV_CSR_MACHINE_TRAP_SETUP_MEDELEG_REG_SV__

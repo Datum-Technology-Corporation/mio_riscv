@@ -16,16 +16,15 @@
 // 
 
 
-`ifndef __MY_RISCV_SUPERVISOR_REG_BLOCK_SV__
-`define __MY_RISCV_SUPERVISOR_REG_BLOCK_SV__
+`ifndef __UVML_RISCV_CSR_EX_SUPERVISOR_REG_BLOCK_SV__
+`define __UVML_RISCV_CSR_EX_SUPERVISOR_REG_BLOCK_SV__
 
 
 /**
- * Register block for RISC-V Supervisor CSRs, Version 1.11.
- * In this reference implementation, all registers listed in the specification
- * are provisioned.
+ * Example supervisor-level register block based upon Moore.io's RISC-V CSR UVM
+ * Library.
  */
-class my_riscv_supervisor_reg_block_c#(
+class uvml_riscv_csr_ex_supervisor_reg_block_c#(
    int unsigned XLEN = 32
 ) extends uvml_riscv_csr_base_reg_block_c#(
    .XLEN(XLEN)
@@ -37,7 +36,7 @@ class my_riscv_supervisor_reg_block_c#(
    rand uvml_riscv_csr_supervisor_protection_and_translation_reg_block_c#(XLEN)  protection_and_translation;
    
    
-   `uvm_object_param_utils_begin(my_riscv_supervisor_reg_block_c#(.XLEN(XLEN)))
+   `uvm_object_param_utils_begin(uvml_riscv_csr_ex_supervisor_reg_block_c#(.XLEN(XLEN)))
       `uvm_field_object(trap_setup                , UVM_DEFAULT)
       `uvm_field_object(trap_handling             , UVM_DEFAULT)
       `uvm_field_object(protection_and_translation, UVM_DEFAULT)
@@ -47,7 +46,7 @@ class my_riscv_supervisor_reg_block_c#(
    /**
     * Default constructor.
     */
-   extern function new(string name="my_riscv_supervisor_reg_block", int has_coverage=UVM_NO_COVERAGE);
+   extern function new(string name="uvml_riscv_csr_ex_supervisor_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
    /**
     * Creates sub-block(s).
@@ -59,17 +58,17 @@ class my_riscv_supervisor_reg_block_c#(
     */
    extern virtual function void create_reg_map();
    
-endclass : my_riscv_supervisor_reg_block_c
+endclass : uvml_riscv_csr_ex_supervisor_reg_block_c
 
 
-function my_riscv_supervisor_reg_block_c::new(string name="my_riscv_supervisor_reg_block", int has_coverage=UVM_NO_COVERAGE);
+function uvml_riscv_csr_ex_supervisor_reg_block_c::new(string name="uvml_riscv_csr_ex_supervisor_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
    super.new(name, has_coverage);
    
 endfunction : new
 
 
-function void my_riscv_supervisor_reg_block_c::create_blocks();
+function void uvml_riscv_csr_ex_supervisor_reg_block_c::create_blocks();
    
    trap_setup = uvml_riscv_csr_supervisor_trap_setup_reg_block_c#(XLEN)::type_id::create("trap_setup");
    trap_setup.configure(this);
@@ -86,7 +85,7 @@ function void my_riscv_supervisor_reg_block_c::create_blocks();
 endfunction : create_blocks
 
 
-function void my_riscv_supervisor_reg_block_c::create_reg_map();
+function void uvml_riscv_csr_ex_supervisor_reg_block_c::create_reg_map();
    
    default_map = create_map(
       .name     ("default_map"),
@@ -98,4 +97,4 @@ function void my_riscv_supervisor_reg_block_c::create_reg_map();
 endfunction : create_reg_map
 
 
-`endif // __MY_RISCV_SUPERVISOR_REG_BLOCK_SV__
+`endif // __UVML_RISCV_CSR_EX_SUPERVISOR_REG_BLOCK_SV__

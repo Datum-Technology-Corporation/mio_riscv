@@ -27,21 +27,13 @@ class uvml_riscv_csr_user_floating_point_fcsr_reg_c#(
    int unsigned XLEN = 32
 ) extends uvml_riscv_csr_ext_base_reg_c;
    
-   rand uvml_ral_reg_field  nx ;
-   rand uvml_ral_reg_field  uf ;
-   rand uvml_ral_reg_field  of ;
-   rand uvml_ral_reg_field  dz ;
-   rand uvml_ral_reg_field  nv ;
-   rand uvml_ral_reg_field  frm;
+   rand uvml_ral_reg_field  fflags;
+   rand uvml_ral_reg_field  frm   ;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_user_floating_point_fcsr_reg_c#(.XLEN(XLEN)))
-      `uvm_field_object(nx , UVM_DEFAULT)
-      `uvm_field_object(uf , UVM_DEFAULT)
-      `uvm_field_object(of , UVM_DEFAULT)
-      `uvm_field_object(dz , UVM_DEFAULT)
-      `uvm_field_object(nv , UVM_DEFAULT)
-      `uvm_field_object(frm, UVM_DEFAULT)
+      `uvm_field_object(fflags, UVM_DEFAULT)
+      `uvm_field_object(frm   , UVM_DEFAULT)
    `uvm_object_utils_end
    
    
@@ -67,10 +59,10 @@ endfunction : new
 
 function void uvml_riscv_csr_user_floating_point_fcsr_reg_c::build();
    
-   nx = uvml_ral_reg_field::type_id::create("nx");
-   nx.configure(
+   fflags = uvml_ral_reg_field::type_id::create("fflags");
+   fflags.configure(
       .parent                 (this),
-      .size                   (   1),
+      .size                   (   5),
       .lsb_pos                (   0),
       .access                 ("RW"),
       .volatile               (   1),
@@ -80,60 +72,8 @@ function void uvml_riscv_csr_user_floating_point_fcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   uf = uvml_ral_reg_field::type_id::create("uf");
-   uf.configure(
-      .parent                 (this),
-      .size                   (   1),
-      .lsb_pos                (   1),
-      .access                 ("RW"),
-      .volatile               (   1),
-      .reset                  (   0),
-      .has_reset              (   1),
-      .is_rand                (   1),
-      .individually_accessible(   1)
-   );
-   
-   of = uvml_ral_reg_field::type_id::create("of");
-   of.configure(
-      .parent                 (this),
-      .size                   (   1),
-      .lsb_pos                (   2),
-      .access                 ("RW"),
-      .volatile               (   1),
-      .reset                  (   0),
-      .has_reset              (   1),
-      .is_rand                (   1),
-      .individually_accessible(   1)
-   );
-   
-   dz = uvml_ral_reg_field::type_id::create("dz");
-   dz.configure(
-      .parent                 (this),
-      .size                   (   1),
-      .lsb_pos                (   3),
-      .access                 ("RW"),
-      .volatile               (   1),
-      .reset                  (   0),
-      .has_reset              (   1),
-      .is_rand                (   1),
-      .individually_accessible(   1)
-   );
-   
-   nv = uvml_ral_reg_field::type_id::create("nv");
-   nv.configure(
-      .parent                 (this),
-      .size                   (   1),
-      .lsb_pos                (   4),
-      .access                 ("RW"),
-      .volatile               (   0),
-      .reset                  (   0),
-      .has_reset              (   1),
-      .is_rand                (   1),
-      .individually_accessible(   1)
-   );
-   
-   xyz = uvml_ral_reg_field::type_id::create("xyz");
-   xyz.configure(
+   frm = uvml_ral_reg_field::type_id::create("frm");
+   frm.configure(
       .parent                 (this),
       .size                   (   3),
       .lsb_pos                (   5),

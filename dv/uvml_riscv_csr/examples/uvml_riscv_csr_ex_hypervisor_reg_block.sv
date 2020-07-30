@@ -16,26 +16,30 @@
 // 
 
 
-`ifndef __MY_RISCV_REG_BLOCK_SV__
-`define __MY_RISCV_REG_BLOCK_SV__
+`ifndef __UVML_RISCV_CSR_EX_HYPERVISOR_REG_BLOCK_SV__
+`define __UVML_RISCV_CSR_EX_HYPERVISOR_REG_BLOCK_SV__
 
 
 /**
- * Reference Model top-level Register Block for RISC-V CSRs, Version 1.11.
- * In this reference implementation, all registers listed in the specification
- * are provisioned.
+ * Example hypervisor-level register block based upon Moore.io's RISC-V CSR UVM
+ * Library.
  */
-class my_riscv_reg_block_c#(
-   int unsigned MXLEN = 32,
-   int unsigned SXLEN = 32
-) extends uvml_al_reg_block_c;
+class uvml_riscv_csr_ex_hypervisor_reg_block_c#(
+   int unsigned XLEN = 32
+) extends uvml_riscv_csr_base_reg_block_c#(
+   .XLEN(XLEN)
+);
    
    // Sub-Blocks
    // TODO Add sub-block(s)
-   //      Ex: rand my_riscv_ml_abc_reg_block_c  abc;
+   //      Ex: rand uvml_riscv_csr_ex_ml_abc_reg_block_c  abc;
+   
+   // Registers
+   // TODO Add register(s)
+   //      Ex: rand uvml_riscv_csr_ex_ml_xyz_reg_c  xyz;
    
    
-   `uvm_object_param_utils_begin(my_riscv_reg_block_c#(.XLEN(XLEN)))
+   `uvm_object_param_utils_begin(uvml_riscv_csr_ex_hypervisor_reg_block_c#(.XLEN(XLEN)))
       // TODO Add field macros for sub-block(s) and register(s)
       //      Ex: `uvm_field_object(abc, UVM_DEFAULT)
       //          `uvm_field_object(xyz, UVM_DEFAULT)
@@ -45,7 +49,7 @@ class my_riscv_reg_block_c#(
    /**
     * Default constructor.
     */
-   extern function new(string name="my_riscv_reg_block", int has_coverage=UVM_NO_COVERAGE);
+   extern function new(string name="uvml_riscv_csr_ex_hypervisor_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
    /**
     * Creates sub-block(s).
@@ -53,41 +57,51 @@ class my_riscv_reg_block_c#(
    extern virtual function void create_blocks();
    
    /**
+    * Creates register(s).
+    */
+   extern virtual function void create_regs();
+   
+   /**
     * Creates default register map.
     */
    extern virtual function void create_reg_map();
    
-endclass : my_riscv_reg_block_c
+   /**
+    * Adds register(s) to register map.
+    */
+   extern virtual function void add_regs_to_map();
+   
+endclass : uvml_riscv_csr_ex_hypervisor_reg_block_c
 
 
-function my_riscv_reg_block_c::new(string name="my_riscv_reg_block", int has_coverage=UVM_NO_COVERAGE);
+function uvml_riscv_csr_ex_hypervisor_reg_block_c::new(string name="uvml_riscv_csr_ex_hypervisor_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
    super.new(name, has_coverage);
    
 endfunction : new
 
 
-function void my_riscv_reg_block_c::create_blocks();
+function void uvml_riscv_csr_ex_hypervisor_reg_block_c::create_blocks();
    
-   // TODO Implement my_riscv_reg_block_c::create_blocks()
-   //      Ex: abc = my_riscv_ml_abc_reg_block_c::type_id::create("abc");
+   // TODO Implement uvml_riscv_csr_ex_hypervisor_reg_block_c::create_blocks()
+   //      Ex: abc = uvml_riscv_csr_ex_ml_abc_reg_block_c::type_id::create("abc");
    //          abc.configure(this);
    //          abc.build();
    
 endfunction : create_blocks
 
 
-function void my_riscv_reg_block_c::create_regs();
+function void uvml_riscv_csr_ex_hypervisor_reg_block_c::create_regs();
    
-   // TODO Implement my_riscv_reg_block_c::create_regs()
-   //      Ex:  xyz = my_riscv_ml_xyz_reg_c::type_id::create("xyz");
+   // TODO Implement uvml_riscv_csr_ex_hypervisor_reg_block_c::create_regs()
+   //      Ex:  xyz = uvml_riscv_csr_ex_ml_xyz_reg_c::type_id::create("xyz");
    //           xyz.configure(this);
    //           xyz.build();
    
 endfunction : create_regs
 
 
-function void my_riscv_reg_block_c::create_reg_map();
+function void uvml_riscv_csr_ex_hypervisor_reg_block_c::create_reg_map();
    
    default_map = create_map(
       .name     ("default_map"),
@@ -99,9 +113,9 @@ function void my_riscv_reg_block_c::create_reg_map();
 endfunction : create_reg_map
 
 
-function void my_riscv_reg_block_c::add_regs_to_map();
+function void uvml_riscv_csr_ex_hypervisor_reg_block_c::add_regs_to_map();
    
-   // TODO Implement my_riscv_reg_block_c::add_regs_to_map()
+   // TODO Implement uvml_riscv_csr_ex_hypervisor_reg_block_c::add_regs_to_map()
    //      Ex: default_map.add_reg(
    //             .rg    (xyz),
    //             .offset(32'h00_00_00_00),
@@ -111,4 +125,4 @@ function void my_riscv_reg_block_c::add_regs_to_map();
 endfunction : add_regs_to_map
 
 
-`endif // __MY_RISCV_REG_BLOCK_SV__
+`endif // __UVML_RISCV_CSR_EX_HYPERVISOR_REG_BLOCK_SV__
