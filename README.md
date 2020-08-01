@@ -1,2 +1,2 @@
-# Moore.io RISC-V Hopper
-Moore.io's hopper of RISC-V IP, VIP & Script packages.
+# Moore.io RISC-V Project
+Moore.io's collection of RISC-V IP, VIP & Script packages.
