@@ -20,6 +20,7 @@
 +incdir+${DV_UVML_RISCV_CSR_SRC_PATH}
 +incdir+${DV_UVML_RISCV_CSR_SRC_PATH}/comps
 +incdir+${DV_UVML_RISCV_CSR_SRC_PATH}/obj
++incdir+${DV_UVML_RISCV_CSR_SRC_PATH}/reg
 
 // Files
 ${DV_UVML_RISCV_CSR_SRC_PATH}/uvml_riscv_csr_pkg.sv
