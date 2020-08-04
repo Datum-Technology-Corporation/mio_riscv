@@ -16,33 +16,33 @@
 // 
 
 
-`ifndef __UVML_RISCV_CSR_USER_COUNTER_TIMERS_RV64RV128_REG_BLOCK_SV__
-`define __UVML_RISCV_CSR_USER_COUNTER_TIMERS_RV64RV128_REG_BLOCK_SV__
+`ifndef __UVML_RISCV_CSR_MACHINE_COUNTERS_TIMERS_RV64RV128_REG_BLOCK_SV__
+`define __UVML_RISCV_CSR_MACHINE_COUNTERS_TIMERS_RV64RV128_REG_BLOCK_SV__
 
 
 /**
- * Register block for RISC-V User Counter/Timers CSRs RV64/RV128, Version 1.11.
+ * Register block for RISC-V Machine Counter/Timers CSRs RV64/RV128, Version 1.11.
  */
-class uvml_riscv_csr_user_counter_timers_rv64rv128_reg_block_c extends uvml_riscv_csr_user_counter_timers_base_reg_block_c#(
+class uvml_riscv_csr_machine_counters_timers_rv64rv128_reg_block_c extends uvml_riscv_csr_machine_counters_timers_base_reg_block_c#(
    .XLEN(32)
 );
    
-   `uvm_object_utils(uvml_riscv_csr_user_counter_timers_rv64rv128_reg_block_c)
+   `uvm_object_utils(uvml_riscv_csr_machine_counters_timers_rv64rv128_reg_block_c)
    
    
    /**
     * Default constructor.
     */
-   extern function new(string name="uvml_riscv_csr_user_counter_timers_rv64rv128_reg_block", int has_coverage=UVM_NO_COVERAGE);
+   extern function new(string name="uvml_riscv_csr_machine_counters_timers_rv64rv128_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
-endclass : uvml_riscv_csr_user_counter_timers_rv64rv128_reg_block_c
+endclass : uvml_riscv_csr_machine_counters_timers_rv64rv128_reg_block_c
 
 
-function uvml_riscv_csr_user_counter_timers_rv64rv128_reg_block_c::new(string name="uvml_riscv_csr_user_counter_timers_rv64rv128_reg_block", int has_coverage=UVM_NO_COVERAGE);
+function uvml_riscv_csr_machine_counters_timers_rv64rv128_reg_block_c::new(string name="uvml_riscv_csr_machine_counters_timers_rv64rv128_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
    super.new(name, has_coverage);
    
 endfunction : new
 
 
-`endif // __UVML_RISCV_CSR_USER_COUNTER_TIMERS_RV64RV128_REG_BLOCK_SV__
+`endif // __UVML_RISCV_CSR_MACHINE_COUNTERS_TIMERS_RV64RV128_REG_BLOCK_SV__

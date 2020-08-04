@@ -23,7 +23,7 @@
 /**
  * Register block for RISC-V User Counter/Timers CSRs, Version 1.11.
  */
-class uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c extends uvml_riscv_csr_machine_counter_timers_base_reg_block_c#(
+class uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c extends uvml_riscv_csr_machine_counters_timers_base_reg_block_c#(
    .XLEN(32)
 );
    

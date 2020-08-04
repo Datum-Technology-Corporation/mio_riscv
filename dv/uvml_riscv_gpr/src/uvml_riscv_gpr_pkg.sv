@@ -30,7 +30,8 @@
  */
 package uvml_riscv_gpr_pkg;
    
-   import uvm_pkg::*;
+   import uvm_pkg        ::*;
+   import uvm_version_pkg::*;
    
    // Constants / Structs / Enums
    `include "uvml_riscv_gpr_constants.sv"
