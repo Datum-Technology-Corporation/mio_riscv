@@ -28,37 +28,37 @@ class uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c extends uvml_riscv_
 );
    
    // Registers
-   rand uvml_riscv_csr_machine_counter_timers_mcycleh_reg_c     #(XLEN)  mcycleh       ; ///< Upper 32 bits of mcycle, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_minstreth_reg_c   #(XLEN)  minstreth     ; ///< Upper 32 bits of minstret, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter3h ; ///< Upper 32 bits of mhpmcounter3, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter4h ; ///< Upper 32 bits of mhpmcounter4, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter5h ; ///< Upper 32 bits of mhpmcounter5, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter6h ; ///< Upper 32 bits of mhpmcounter6, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter7h ; ///< Upper 32 bits of mhpmcounter7, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter8h ; ///< Upper 32 bits of mhpmcounter8, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter9h ; ///< Upper 32 bits of mhpmcounter9, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter10h; ///< Upper 32 bits of mhpmcounter10, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter11h; ///< Upper 32 bits of mhpmcounter11, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter12h; ///< Upper 32 bits of mhpmcounter12, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter13h; ///< Upper 32 bits of mhpmcounter13, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter14h; ///< Upper 32 bits of mhpmcounter14, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter15h; ///< Upper 32 bits of mhpmcounter15, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter16h; ///< Upper 32 bits of mhpmcounter16, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter17h; ///< Upper 32 bits of mhpmcounter17, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter18h; ///< Upper 32 bits of mhpmcounter18, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter19h; ///< Upper 32 bits of mhpmcounter19, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter20h; ///< Upper 32 bits of mhpmcounter20, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter21h; ///< Upper 32 bits of mhpmcounter21, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter22h; ///< Upper 32 bits of mhpmcounter22, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter23h; ///< Upper 32 bits of mhpmcounter23, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter24h; ///< Upper 32 bits of mhpmcounter24, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter25h; ///< Upper 32 bits of mhpmcounter25, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter26h; ///< Upper 32 bits of mhpmcounter26, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter27h; ///< Upper 32 bits of mhpmcounter27, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter28h; ///< Upper 32 bits of mhpmcounter28, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter29h; ///< Upper 32 bits of mhpmcounter29, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter30h; ///< Upper 32 bits of mhpmcounter30, RV32I only.
-   rand uvml_riscv_csr_machine_counter_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter31h; ///< Upper 32 bits of mhpmcounter31, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mcycleh_reg_c     #(XLEN)  mcycleh       ; ///< Upper 32 bits of mcycle, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_minstreth_reg_c   #(XLEN)  minstreth     ; ///< Upper 32 bits of minstret, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter3h ; ///< Upper 32 bits of mhpmcounter3, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter4h ; ///< Upper 32 bits of mhpmcounter4, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter5h ; ///< Upper 32 bits of mhpmcounter5, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter6h ; ///< Upper 32 bits of mhpmcounter6, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter7h ; ///< Upper 32 bits of mhpmcounter7, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter8h ; ///< Upper 32 bits of mhpmcounter8, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter9h ; ///< Upper 32 bits of mhpmcounter9, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter10h; ///< Upper 32 bits of mhpmcounter10, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter11h; ///< Upper 32 bits of mhpmcounter11, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter12h; ///< Upper 32 bits of mhpmcounter12, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter13h; ///< Upper 32 bits of mhpmcounter13, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter14h; ///< Upper 32 bits of mhpmcounter14, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter15h; ///< Upper 32 bits of mhpmcounter15, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter16h; ///< Upper 32 bits of mhpmcounter16, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter17h; ///< Upper 32 bits of mhpmcounter17, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter18h; ///< Upper 32 bits of mhpmcounter18, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter19h; ///< Upper 32 bits of mhpmcounter19, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter20h; ///< Upper 32 bits of mhpmcounter20, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter21h; ///< Upper 32 bits of mhpmcounter21, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter22h; ///< Upper 32 bits of mhpmcounter22, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter23h; ///< Upper 32 bits of mhpmcounter23, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter24h; ///< Upper 32 bits of mhpmcounter24, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter25h; ///< Upper 32 bits of mhpmcounter25, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter26h; ///< Upper 32 bits of mhpmcounter26, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter27h; ///< Upper 32 bits of mhpmcounter27, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter28h; ///< Upper 32 bits of mhpmcounter28, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter29h; ///< Upper 32 bits of mhpmcounter29, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter30h; ///< Upper 32 bits of mhpmcounter30, RV32I only.
+   rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter31h; ///< Upper 32 bits of mhpmcounter31, RV32I only.
    
    
    `uvm_object_utils_begin(uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c)
@@ -125,134 +125,134 @@ function void uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c::create_reg
    
    super.create_regs();
    
-   mcycleh = uvml_riscv_csr_machine_counter_timers_cycle_reg_c#(XLEN)::type_id::create("mcycleh");
+   mcycleh = uvml_riscv_csr_machine_counters_timers_cycleh_reg_c#(XLEN)::type_id::create("mcycleh");
    mcycleh.configure(this);
    mcycleh.build();
    
-   minstreth = uvml_riscv_csr_machine_counter_timers_instret_reg_c#(XLEN)::type_id::create("minstreth");
+   minstreth = uvml_riscv_csr_machine_counters_timers_instreth_reg_c#(XLEN)::type_id::create("minstreth");
    minstreth.configure(this);
    minstreth.build();
    
-   mhpmcounter3h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter3h");
+   mhpmcounter3h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter3h");
    mhpmcounter3h.configure(this);
    mhpmcounter3h.build();
    
-   mhpmcounter4h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter4h");
+   mhpmcounter4h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter4h");
    mhpmcounter4h.configure(this);
    mhpmcounter4h.build();
    
-   mhpmcounter5h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter5h");
+   mhpmcounter5h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter5h");
    mhpmcounter5h.configure(this);
    mhpmcounter5h.build();
    
-   mhpmcounter6h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter6h");
+   mhpmcounter6h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter6h");
    mhpmcounter6h.configure(this);
    mhpmcounter6h.build();
    
-   mhpmcounter7h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter7h");
+   mhpmcounter7h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter7h");
    mhpmcounter7h.configure(this);
    mhpmcounter7h.build();
    
-   mhpmcounter8h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter8h");
+   mhpmcounter8h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter8h");
    mhpmcounter8h.configure(this);
    mhpmcounter8h.build();
    
-   mhpmcounter9h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter9h");
+   mhpmcounter9h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter9h");
    mhpmcounter9h.configure(this);
    mhpmcounter9h.build();
    
-   mhpmcounter10h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter10h");
+   mhpmcounter10h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter10h");
    mhpmcounter10h.configure(this);
    mhpmcounter10h.build();
    
-   mhpmcounter11h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter11h");
+   mhpmcounter11h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter11h");
    mhpmcounter11h.configure(this);
    mhpmcounter11h.build();
    
-   mhpmcounter12h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter12h");
+   mhpmcounter12h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter12h");
    mhpmcounter12h.configure(this);
    mhpmcounter12h.build();
    
-   mhpmcounter13h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter13h");
+   mhpmcounter13h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter13h");
    mhpmcounter13h.configure(this);
    mhpmcounter13h.build();
    
-   mhpmcounter14h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter14h");
+   mhpmcounter14h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter14h");
    mhpmcounter14h.configure(this);
    mhpmcounter14h.build();
    
-   mhpmcounter15h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter15h");
+   mhpmcounter15h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter15h");
    mhpmcounter15h.configure(this);
    mhpmcounter15h.build();
    
-   mhpmcounter16h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter16h");
+   mhpmcounter16h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter16h");
    mhpmcounter16h.configure(this);
    mhpmcounter16h.build();
    
-   mhpmcounter17h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter17h");
+   mhpmcounter17h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter17h");
    mhpmcounter17h.configure(this);
    mhpmcounter17h.build();
    
-   mhpmcounter18h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter18h");
+   mhpmcounter18h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter18h");
    mhpmcounter18h.configure(this);
    mhpmcounter18h.build();
    
-   mhpmcounter19h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter19h");
+   mhpmcounter19h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter19h");
    mhpmcounter19h.configure(this);
    mhpmcounter19h.build();
    
-   mhpmcounter20h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter20h");
+   mhpmcounter20h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter20h");
    mhpmcounter20h.configure(this);
    mhpmcounter20h.build();
    
-   mhpmcounter21h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter21h");
+   mhpmcounter21h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter21h");
    mhpmcounter21h.configure(this);
    mhpmcounter21h.build();
    
-   mhpmcounter22h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter22h");
+   mhpmcounter22h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter22h");
    mhpmcounter22h.configure(this);
    mhpmcounter22h.build();
    
-   mhpmcounter23h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter23h");
+   mhpmcounter23h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter23h");
    mhpmcounter23h.configure(this);
    mhpmcounter23h.build();
    
-   mhpmcounter24h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter24h");
+   mhpmcounter24h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter24h");
    mhpmcounter24h.configure(this);
    mhpmcounter24h.build();
    
-   mhpmcounter25h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter25h");
+   mhpmcounter25h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter25h");
    mhpmcounter25h.configure(this);
    mhpmcounter25h.build();
    
-   mhpmcounter26h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter26h");
+   mhpmcounter26h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter26h");
    mhpmcounter26h.configure(this);
    mhpmcounter26h.build();
    
-   mhpmcounter27h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter27h");
+   mhpmcounter27h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter27h");
    mhpmcounter27h.configure(this);
    mhpmcounter27h.build();
    
-   mhpmcounter28h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter28h");
+   mhpmcounter28h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter28h");
    mhpmcounter28h.configure(this);
    mhpmcounter28h.build();
    
-   mhpmcounter29h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter29h");
+   mhpmcounter29h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter29h");
    mhpmcounter29h.configure(this);
    mhpmcounter29h.build();
    
-   mhpmcounter30h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter30h");
+   mhpmcounter30h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter30h");
    mhpmcounter30h.configure(this);
    mhpmcounter30h.build();
    
-   mhpmcounter31h = uvml_riscv_csr_machine_counter_timers_mhpmcounter_reg_c#(XLEN)::type_id::create("mhpmcounter31h");
+   mhpmcounter31h = uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)::type_id::create("mhpmcounter31h");
    mhpmcounter31h.configure(this);
    mhpmcounter31h.build();
    
 endfunction : create_regs
 
 
-function void uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c::add_regs_to_map();
+function void uvml_riscv_csr_machine_counters_timers_rv32_reg_block_c::add_regs_to_map();
    
    super.add_regs_to_map();
    
