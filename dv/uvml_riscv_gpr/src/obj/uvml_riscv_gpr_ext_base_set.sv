@@ -46,8 +46,8 @@ function uvml_riscv_gpr_ext_base_set_c::new(string name="uvml_riscv_gpr_ext_base
    
    super.new(name);
    version = uvml_version_maj_min_c::type_id::create("version");
-   version.major = uvml_riscv_set_csr_version_major;
-   version.minor = uvml_riscv_set_csr_version_minor;
+   version.major = uvml_riscv_gpr_version_major;
+   version.minor = uvml_riscv_gpr_version_minor;
    
 endfunction : new
 

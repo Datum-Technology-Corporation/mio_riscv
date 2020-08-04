@@ -20,7 +20,8 @@
 `define __UVML_RISCV_GPR_CONSTANTS_SV__
 
 
-
+const int unsigned  uvml_riscv_gpr_version_major =  1;
+const int unsigned  uvml_riscv_gpr_version_minor = 11;
 
 
 `endif // __UVML_RISCV_GPR_CONSTANTS_SV__
