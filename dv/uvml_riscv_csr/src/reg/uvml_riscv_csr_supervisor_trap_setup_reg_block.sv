@@ -54,6 +54,11 @@ class uvml_riscv_csr_supervisor_trap_setup_reg_block_c#(
    extern function new(string name="uvml_riscv_csr_supervisor_trap_setup_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
    /**
+    * Returns the default base address for this register block.
+    */
+   extern virtual function longint unsigned get_default_base_address();
+   
+   /**
     * Creates register(s).
     */
    extern virtual function void create_regs();
