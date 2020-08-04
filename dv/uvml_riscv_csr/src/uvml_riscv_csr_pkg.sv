@@ -39,6 +39,7 @@ package uvml_riscv_csr_pkg;
    `include "uvml_riscv_csr_tdefs.sv"
    
    // Registers
+   `include "uvml_riscv_csr_base_reg.sv"
    //`include "uvml_riscv_csr_user_trap_setup_ustatus_reg.sv"
    //`include "uvml_riscv_csr_user_trap_setup_uie_reg.sv"
    //`include "uvml_riscv_csr_user_trap_setup_utvec_reg.sv"
@@ -110,6 +111,7 @@ package uvml_riscv_csr_pkg;
    `include "uvml_riscv_csr_machine_trap_handling_mip_reg.sv"
    
    // Register Blocks
+   `include "uvml_riscv_csr_base_reg_block.sv"
    `include "uvml_riscv_csr_user_trap_setup_reg_block.sv"
    `include "uvml_riscv_csr_user_trap_handling_reg_block.sv"
    `include "uvml_riscv_csr_user_floating_point_reg_block.sv"
