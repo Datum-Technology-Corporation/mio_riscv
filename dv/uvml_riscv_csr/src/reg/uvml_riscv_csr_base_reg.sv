@@ -23,13 +23,15 @@
 /**
  * TODO Describe uvml_riscv_csr_base_reg_c
  */
-class uvml_riscv_csr_base_reg_c extends uvml_ral_reg_c;
+class uvml_riscv_csr_base_reg_c#(
+   int unsigned XLEN = 32
+) extends uvml_ral_reg_c;
    
    // Metadata
    uvml_version_maj_min_c  version;
    
    
-   `uvm_object_utils_begin(uvml_riscv_csr_base_reg_c)
+   `uvm_object_param_utils_begin(uvml_riscv_csr_base_reg_c#(.XLEN(XLEN)))
       `uvm_field_object(version, UVM_DEFAULT)
    `uvm_object_utils_end
    

@@ -31,7 +31,7 @@ class uvml_riscv_csr_base_reg_block_c#(
    uvml_version_maj_min_c  version;
    
    
-   `uvm_object_params_utils_begin(uvml_riscv_csr_base_reg_block_c#(.XLEN(XLEN)))
+   `uvm_object_param_utils_begin(uvml_riscv_csr_base_reg_block_c#(.XLEN(XLEN)))
       `uvm_field_object(version, UVM_DEFAULT)
    `uvm_object_utils_end
    
