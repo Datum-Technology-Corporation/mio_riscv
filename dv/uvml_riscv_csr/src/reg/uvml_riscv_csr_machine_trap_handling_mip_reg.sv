@@ -50,7 +50,7 @@ class uvml_riscv_csr_machine_trap_handling_mie_reg_c#(
       `uvm_field_object(ueip, UVM_DEFAULT)
       `uvm_field_object(seip, UVM_DEFAULT)
       `uvm_field_object(meip, UVM_DEFAULT)
-   `uvm_object_utils_endmeip
+   `uvm_object_utils_end
    
    
    /**

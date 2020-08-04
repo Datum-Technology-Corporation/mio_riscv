@@ -76,7 +76,7 @@ package uvml_riscv_csr_pkg;
    `include "uvml_riscv_csr_machine_counters_timers_minstret_reg.sv"
    `include "uvml_riscv_csr_machine_counters_timers_mhpmcounter_reg.sv"
    `include "uvml_riscv_csr_machine_counters_timers_mcycleh_reg.sv"
-   `include "uvml_riscv_csr_machine_counters_timers_minstreh_reg.sv"
+   `include "uvml_riscv_csr_machine_counters_timers_minstreth_reg.sv"
    `include "uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg.sv"
    `include "uvml_riscv_csr_machine_debug_trace_tselect_reg.sv"
    `include "uvml_riscv_csr_machine_debug_trace_tdata1_reg.sv"

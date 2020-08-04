@@ -48,7 +48,7 @@ class uvml_riscv_csr_supervisor_trap_handling_sip_reg_c#(
       `uvm_field_object(mtip, UVM_DEFAULT)
       `uvm_field_object(ueip, UVM_DEFAULT)
       `uvm_field_object(seip, UVM_DEFAULT)
-   `uvm_object_utils_endmeip
+   `uvm_object_utils_end
    
    
    /**
