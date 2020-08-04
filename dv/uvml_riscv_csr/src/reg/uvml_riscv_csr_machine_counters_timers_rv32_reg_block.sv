@@ -125,11 +125,11 @@ function void uvml_riscv_csr_machine_counters_timers_rv32_reg_block_c::create_re
    
    super.create_regs();
    
-   mcycleh = uvml_riscv_csr_machine_counters_timers_cycleh_reg_c#(XLEN)::type_id::create("mcycleh");
+   mcycleh = uvml_riscv_csr_machine_counters_timers_mcycleh_reg_c#(XLEN)::type_id::create("mcycleh");
    mcycleh.configure(this);
    mcycleh.build();
    
-   minstreth = uvml_riscv_csr_machine_counters_timers_instreth_reg_c#(XLEN)::type_id::create("minstreth");
+   minstreth = uvml_riscv_csr_machine_counters_timers_minstreth_reg_c#(XLEN)::type_id::create("minstreth");
    minstreth.configure(this);
    minstreth.build();
    
