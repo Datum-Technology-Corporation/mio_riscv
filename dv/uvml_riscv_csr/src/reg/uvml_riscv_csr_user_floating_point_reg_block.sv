@@ -37,7 +37,7 @@ class uvml_riscv_csr_user_floating_point_reg_block_c#(
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_user_floating_point_reg_block_c#(.XLEN(XLEN)))
       `uvm_field_object(fflags, UVM_DEFAULT)
-      `uvm_field_object(frm;  , UVM_DEFAULT)
+      `uvm_field_object(frm   , UVM_DEFAULT)
       `uvm_field_object(fcsr  , UVM_DEFAULT)
    `uvm_object_utils_end
    
