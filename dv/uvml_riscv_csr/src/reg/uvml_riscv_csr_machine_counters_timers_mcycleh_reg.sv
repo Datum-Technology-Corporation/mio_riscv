@@ -23,7 +23,7 @@
 /**
  * RISC-V Machine Cycle Counter.
  */
-class uvml_riscv_csr_machine_counter_timers_mcycleh_reg_c#(
+class uvml_riscv_csr_machine_counters_timers_mcycleh_reg_c#(
    int unsigned XLEN = 32
 ) extends uvml_riscv_csr_ext_base_reg_c#(
    .XLEN(XLEN)
@@ -32,7 +32,7 @@ class uvml_riscv_csr_machine_counter_timers_mcycleh_reg_c#(
    rand uvml_ral_reg_field  mcycleh;
    
    
-   `uvm_object_param_utils_begin(uvml_riscv_csr_machine_counter_timers_mcycleh_reg_c#(.XLEN(XLEN)))
+   `uvm_object_param_utils_begin(uvml_riscv_csr_machine_counters_timers_mcycleh_reg_c#(.XLEN(XLEN)))
       `uvm_field_object(mcycleh, UVM_DEFAULT)
    `uvm_object_utils_end
    
@@ -40,24 +40,24 @@ class uvml_riscv_csr_machine_counter_timers_mcycleh_reg_c#(
    /**
     * Default constructor.
     */
-   extern function new(string name="uvml_riscv_csr_machine_counter_timers_mcycleh_reg", int unsigned n_bits=32, int has_coverage=UVM_NO_COVERAGE);
+   extern function new(string name="uvml_riscv_csr_machine_counters_timers_mcycleh_reg", int unsigned n_bits=32, int has_coverage=UVM_NO_COVERAGE);
    
    /**
     * Create and configure register fields.
     */
    extern virtual function void build();
    
-endclass : uvml_riscv_csr_machine_counter_timers_mcycleh_reg_c
+endclass : uvml_riscv_csr_machine_counters_timers_mcycleh_reg_c
 
 
-function uvml_riscv_csr_machine_counter_timers_mcycleh_reg_c::new(string name="uvml_riscv_csr_machine_counter_timers_mcycleh_reg", int unsigned n_bits=32, int has_coverage=UVM_NO_COVERAGE);
+function uvml_riscv_csr_machine_counters_timers_mcycleh_reg_c::new(string name="uvml_riscv_csr_machine_counters_timers_mcycleh_reg", int unsigned n_bits=32, int has_coverage=UVM_NO_COVERAGE);
    
    super.new(name, n_bits, has_coverage);
    
 endfunction : new
 
 
-function void uvml_riscv_csr_machine_counter_timers_mcycleh_reg_c::build();
+function void uvml_riscv_csr_machine_counters_timers_mcycleh_reg_c::build();
    
    mcycleh = uvml_ral_reg_field::type_id::create("mcycleh");
    mcycleh.configure(
