@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_memory_protection_pmpaddr_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  address;
+   rand uvml_ral_reg_field_c  address;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_memory_protection_pmpaddr_reg_c#(.XLEN(XLEN)))
@@ -66,7 +66,7 @@ function void uvml_riscv_csr_machine_memory_protection_pmpaddr_reg_c::build();
       64: address_size = 54;
    endcase
    
-   address = uvml_ral_reg_field::type_id::create("address");
+   address = uvml_ral_reg_field_c::type_id::create("address");
    address.configure(
       .parent                 (        this),
       .size                   (address_size),

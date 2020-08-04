@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_trap_handling_mepc_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  mepc;
+   rand uvml_ral_reg_field_c  mepc;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_handling_mepc_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_trap_handling_mepc_reg_c::build();
    
-   mepc = uvml_ral_reg_field::type_id::create("mepc");
+   mepc = uvml_ral_reg_field_c::type_id::create("mepc");
    mepc.configure(
       .parent                 (this),
       .size                   (XLEN),

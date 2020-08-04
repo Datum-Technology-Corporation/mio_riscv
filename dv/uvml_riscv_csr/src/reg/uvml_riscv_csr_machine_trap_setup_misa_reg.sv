@@ -29,8 +29,8 @@ class uvml_riscv_csr_machine_trap_setup_misa_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  extensions;
-   rand uvml_ral_reg_field  mxl       ;
+   rand uvml_ral_reg_field_c  extensions;
+   rand uvml_ral_reg_field_c  mxl       ;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_setup_misa_reg_c#(.XLEN(XLEN)))
@@ -61,7 +61,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_trap_setup_misa_reg_c::build();
    
-   extensions = uvml_ral_reg_field::type_id::create("extensions");
+   extensions = uvml_ral_reg_field_c::type_id::create("extensions");
    extensions.configure(
       .parent                 (this),
       .size                   (  26),
@@ -74,7 +74,7 @@ function void uvml_riscv_csr_machine_trap_setup_misa_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mxl = uvml_ral_reg_field::type_id::create("mxl");
+   mxl = uvml_ral_reg_field_c::type_id::create("mxl");
    mxl.configure(
       .parent                 (  this),
       .size                   (     2),

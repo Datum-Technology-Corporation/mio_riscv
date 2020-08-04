@@ -27,8 +27,8 @@ class uvml_riscv_csr_user_floating_point_fcsr_reg_c#(
    int unsigned XLEN = 32
 ) extends uvml_riscv_csr_base_reg_c;
    
-   rand uvml_ral_reg_field  fflags;
-   rand uvml_ral_reg_field  frm   ;
+   rand uvml_ral_reg_field_c  fflags;
+   rand uvml_ral_reg_field_c  frm   ;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_user_floating_point_fcsr_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_user_floating_point_fcsr_reg_c::build();
    
-   fflags = uvml_ral_reg_field::type_id::create("fflags");
+   fflags = uvml_ral_reg_field_c::type_id::create("fflags");
    fflags.configure(
       .parent                 (this),
       .size                   (   5),
@@ -72,7 +72,7 @@ function void uvml_riscv_csr_user_floating_point_fcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   frm = uvml_ral_reg_field::type_id::create("frm");
+   frm = uvml_ral_reg_field_c::type_id::create("frm");
    frm.configure(
       .parent                 (this),
       .size                   (   3),

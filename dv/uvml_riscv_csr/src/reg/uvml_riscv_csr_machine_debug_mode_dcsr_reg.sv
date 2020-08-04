@@ -29,18 +29,18 @@ class uvml_riscv_csr_machine_debug_mode_dcsr_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  prv      ;
-   rand uvml_ral_reg_field  step     ;
-   rand uvml_ral_reg_field  nmip     ;
-   rand uvml_ral_reg_field  mprven   ;
-   rand uvml_ral_reg_field  cause    ;
-   rand uvml_ral_reg_field  stoptime ;
-   rand uvml_ral_reg_field  stopcount;
-   rand uvml_ral_reg_field  stepie   ;
-   rand uvml_ral_reg_field  ebreaku  ;
-   rand uvml_ral_reg_field  ebreaks  ;
-   rand uvml_ral_reg_field  ebreakm  ;
-   rand uvml_ral_reg_field  xdebugver;
+   rand uvml_ral_reg_field_c  prv      ;
+   rand uvml_ral_reg_field_c  step     ;
+   rand uvml_ral_reg_field_c  nmip     ;
+   rand uvml_ral_reg_field_c  mprven   ;
+   rand uvml_ral_reg_field_c  cause    ;
+   rand uvml_ral_reg_field_c  stoptime ;
+   rand uvml_ral_reg_field_c  stopcount;
+   rand uvml_ral_reg_field_c  stepie   ;
+   rand uvml_ral_reg_field_c  ebreaku  ;
+   rand uvml_ral_reg_field_c  ebreaks  ;
+   rand uvml_ral_reg_field_c  ebreakm  ;
+   rand uvml_ral_reg_field_c  xdebugver;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_debug_mode_dcsr_reg_c#(.XLEN(XLEN)))
@@ -81,7 +81,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
    
-   prv = uvml_ral_reg_field::type_id::create("prv");
+   prv = uvml_ral_reg_field_c::type_id::create("prv");
    prv.configure(
       .parent                 (this),
       .size                   (   2),
@@ -94,7 +94,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   step = uvml_ral_reg_field::type_id::create("step");
+   step = uvml_ral_reg_field_c::type_id::create("step");
    step.configure(
       .parent                 (this),
       .size                   (   1),
@@ -107,7 +107,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   nmip = uvml_ral_reg_field::type_id::create("nmip");
+   nmip = uvml_ral_reg_field_c::type_id::create("nmip");
    nmip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -120,7 +120,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mprven = uvml_ral_reg_field::type_id::create("mprven");
+   mprven = uvml_ral_reg_field_c::type_id::create("mprven");
    mprven.configure(
       .parent                 (this),
       .size                   (   1),
@@ -133,7 +133,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   cause = uvml_ral_reg_field::type_id::create("cause");
+   cause = uvml_ral_reg_field_c::type_id::create("cause");
    cause.configure(
       .parent                 (this),
       .size                   (   3),
@@ -146,7 +146,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   stoptime = uvml_ral_reg_field::type_id::create("stoptime");
+   stoptime = uvml_ral_reg_field_c::type_id::create("stoptime");
    stoptime.configure(
       .parent                 (this),
       .size                   (   1),
@@ -159,7 +159,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   stopcount = uvml_ral_reg_field::type_id::create("stopcount");
+   stopcount = uvml_ral_reg_field_c::type_id::create("stopcount");
    stopcount.configure(
       .parent                 (this),
       .size                   (   1),
@@ -172,7 +172,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   stepie = uvml_ral_reg_field::type_id::create("stepie");
+   stepie = uvml_ral_reg_field_c::type_id::create("stepie");
    stepie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -185,7 +185,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   ebreaku = uvml_ral_reg_field::type_id::create("ebreaku");
+   ebreaku = uvml_ral_reg_field_c::type_id::create("ebreaku");
    ebreaku.configure(
       .parent                 (this),
       .size                   (   1),
@@ -198,7 +198,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   ebreaks = uvml_ral_reg_field::type_id::create("ebreaks");
+   ebreaks = uvml_ral_reg_field_c::type_id::create("ebreaks");
    ebreaks.configure(
       .parent                 (this),
       .size                   (   1),
@@ -211,7 +211,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   ebreakm = uvml_ral_reg_field::type_id::create("ebreakm");
+   ebreakm = uvml_ral_reg_field_c::type_id::create("ebreakm");
    ebreakm.configure(
       .parent                 (this),
       .size                   (   1),
@@ -224,7 +224,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
       .individually_accessible(   1)
    );
    
-   xdebugver = uvml_ral_reg_field::type_id::create("xdebugver");
+   xdebugver = uvml_ral_reg_field_c::type_id::create("xdebugver");
    xdebugver.configure(
       .parent                 (this),
       .size                   (   4),

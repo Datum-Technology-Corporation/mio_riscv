@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_counter_setup_mhpmevent_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  mhpmevent;
+   rand uvml_ral_reg_field_c  mhpmevent;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_counter_setup_mhpmevent_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_counter_setup_mhpmevent_reg_c::build();
    
-   mhpmevent = uvml_ral_reg_field::type_id::create("mhpmevent");
+   mhpmevent = uvml_ral_reg_field_c::type_id::create("mhpmevent");
    mhpmevent.configure(
       .parent                 (this),
       .size                   (XLEN),

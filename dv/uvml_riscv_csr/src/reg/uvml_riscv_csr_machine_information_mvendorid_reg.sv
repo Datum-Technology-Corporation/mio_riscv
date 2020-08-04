@@ -29,8 +29,8 @@ class uvml_riscv_csr_machine_information_mvendorid_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  offset;
-   rand uvml_ral_reg_field  bank  ;
+   rand uvml_ral_reg_field_c  offset;
+   rand uvml_ral_reg_field_c  bank  ;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_information_mvendorid_reg_c#(.XLEN(XLEN)))
@@ -61,7 +61,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_information_mvendorid_reg_c::build();
    
-   offset = uvml_ral_reg_field::type_id::create("offset");
+   offset = uvml_ral_reg_field_c::type_id::create("offset");
    offset.configure(
       .parent                 (this),
       .size                   (   7),
@@ -74,7 +74,7 @@ function void uvml_riscv_csr_machine_information_mvendorid_reg_c::build();
       .individually_accessible(   1)
    );
    
-   bank = uvml_ral_reg_field::type_id::create("bank");
+   bank = uvml_ral_reg_field_c::type_id::create("bank");
    bank.configure(
       .parent                 (this),
       .size                   (  25),

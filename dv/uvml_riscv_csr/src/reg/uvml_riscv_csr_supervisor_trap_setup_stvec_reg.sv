@@ -29,8 +29,8 @@ class uvml_riscv_csr_supervisor_trap_setup_stvec_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  mode;
-   rand uvml_ral_reg_field  base;
+   rand uvml_ral_reg_field_c  mode;
+   rand uvml_ral_reg_field_c  base;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_supervisor_trap_setup_stvec_reg_c#(.XLEN(XLEN)))
@@ -61,7 +61,7 @@ endfunction : new
 
 function void uvml_riscv_csr_supervisor_trap_setup_stvec_reg_c::build();
    
-   mode = uvml_ral_reg_field::type_id::create("mode");
+   mode = uvml_ral_reg_field_c::type_id::create("mode");
    mode.configure(
       .parent                 (this),
       .size                   (   2),
@@ -74,7 +74,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_stvec_reg_c::build();
       .individually_accessible(   1)
    );
    
-   base = uvml_ral_reg_field::type_id::create("base");
+   base = uvml_ral_reg_field_c::type_id::create("base");
    base.configure(
       .parent                 (  this),
       .size                   (XLEN-2),

@@ -29,8 +29,8 @@ class uvml_riscv_csr_supervisor_trap_handling_scause_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  exception_code;
-   rand uvml_ral_reg_field  interrupt     ;
+   rand uvml_ral_reg_field_c  exception_code;
+   rand uvml_ral_reg_field_c  interrupt     ;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_supervisor_trap_handling_scause_reg_c#(.XLEN(XLEN)))
@@ -61,7 +61,7 @@ endfunction : new
 
 function void uvml_riscv_csr_supervisor_trap_handling_scause_reg_c::build();
    
-   exception_code = uvml_ral_reg_field::type_id::create("exception_code");
+   exception_code = uvml_ral_reg_field_c::type_id::create("exception_code");
    exception_code.configure(
       .parent                 (  this),
       .size                   (XLEN-1),
@@ -74,7 +74,7 @@ function void uvml_riscv_csr_supervisor_trap_handling_scause_reg_c::build();
       .individually_accessible(     1)
    );
    
-   interrupt = uvml_ral_reg_field::type_id::create("interrupt");
+   interrupt = uvml_ral_reg_field_c::type_id::create("interrupt");
    interrupt.configure(
       .parent                 (  this),
       .size                   (     1),

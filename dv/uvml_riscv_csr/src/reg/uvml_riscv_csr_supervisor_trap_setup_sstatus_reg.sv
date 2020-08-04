@@ -29,17 +29,17 @@ class uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  uie ;
-   rand uvml_ral_reg_field  sie ;
-   rand uvml_ral_reg_field  upie;
-   rand uvml_ral_reg_field  spie;
-   rand uvml_ral_reg_field  spp ;
-   rand uvml_ral_reg_field  fs  ;
-   rand uvml_ral_reg_field  xs  ;
-   rand uvml_ral_reg_field  sum ;
-   rand uvml_ral_reg_field  mxr ;
-   rand uvml_ral_reg_field  uxl ;
-   rand uvml_ral_reg_field  sd  ;
+   rand uvml_ral_reg_field_c  uie ;
+   rand uvml_ral_reg_field_c  sie ;
+   rand uvml_ral_reg_field_c  upie;
+   rand uvml_ral_reg_field_c  spie;
+   rand uvml_ral_reg_field_c  spp ;
+   rand uvml_ral_reg_field_c  fs  ;
+   rand uvml_ral_reg_field_c  xs  ;
+   rand uvml_ral_reg_field_c  sum ;
+   rand uvml_ral_reg_field_c  mxr ;
+   rand uvml_ral_reg_field_c  uxl ;
+   rand uvml_ral_reg_field_c  sd  ;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c#(.XLEN(XLEN)))
@@ -79,7 +79,7 @@ endfunction : new
 
 function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
    
-   uie = uvml_ral_reg_field::type_id::create("uie");
+   uie = uvml_ral_reg_field_c::type_id::create("uie");
    uie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -92,7 +92,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   sie = uvml_ral_reg_field::type_id::create("sie");
+   sie = uvml_ral_reg_field_c::type_id::create("sie");
    sie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -105,7 +105,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   upie = uvml_ral_reg_field::type_id::create("upie");
+   upie = uvml_ral_reg_field_c::type_id::create("upie");
    upie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -118,7 +118,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   spie = uvml_ral_reg_field::type_id::create("spie");
+   spie = uvml_ral_reg_field_c::type_id::create("spie");
    spie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -131,7 +131,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   spp = uvml_ral_reg_field::type_id::create("spp");
+   spp = uvml_ral_reg_field_c::type_id::create("spp");
    spp.configure(
       .parent                 (this),
       .size                   (   1),
@@ -144,7 +144,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   fs = uvml_ral_reg_field::type_id::create("fs");
+   fs = uvml_ral_reg_field_c::type_id::create("fs");
    fs.configure(
       .parent                 (this),
       .size                   (   2),
@@ -157,7 +157,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   xs = uvml_ral_reg_field::type_id::create("xs");
+   xs = uvml_ral_reg_field_c::type_id::create("xs");
    xs.configure(
       .parent               (this),
       .size                 (   2),
@@ -170,7 +170,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       .individual_accessible(   1)
    );
    
-   sum = uvml_ral_reg_field::type_id::create("sum");
+   sum = uvml_ral_reg_field_c::type_id::create("sum");
    sum.configure(
       .parent                 (this),
       .size                   (   1),
@@ -183,7 +183,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mxr = uvml_ral_reg_field::type_id::create("mxr");
+   mxr = uvml_ral_reg_field_c::type_id::create("mxr");
    mxr.configure(
       .parent                 (this),
       .size                   (   1),
@@ -198,7 +198,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
    
    case (XLEN)
       64: begin
-         uxl = uvml_ral_reg_field::type_id::create("uxl");
+         uxl = uvml_ral_reg_field_c::type_id::create("uxl");
          uxl.configure(
             .parent                 (this),
             .size                   (   2),
@@ -213,7 +213,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
       end
    endcase
    
-   sd = uvml_ral_reg_field::type_id::create("sd");
+   sd = uvml_ral_reg_field_c::type_id::create("sd");
    sd.configure(
       .parent                 (  this),
       .size                   (     1),

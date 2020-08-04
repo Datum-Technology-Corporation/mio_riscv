@@ -27,12 +27,12 @@ class uvml_riscv_csr_user_floating_point_fflags_reg_c#(
    int unsigned XLEN = 32
 ) extends uvml_riscv_csr_base_reg_c;
    
-   rand uvml_ral_reg_field  nx ;
-   rand uvml_ral_reg_field  uf ;
-   rand uvml_ral_reg_field  of ;
-   rand uvml_ral_reg_field  dz ;
-   rand uvml_ral_reg_field  nv ;
-   rand uvml_ral_reg_field  frm;
+   rand uvml_ral_reg_field_c  nx ;
+   rand uvml_ral_reg_field_c  uf ;
+   rand uvml_ral_reg_field_c  of ;
+   rand uvml_ral_reg_field_c  dz ;
+   rand uvml_ral_reg_field_c  nv ;
+   rand uvml_ral_reg_field_c  frm;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_user_floating_point_fflags_reg_c#(.XLEN(XLEN)))
@@ -67,7 +67,7 @@ endfunction : new
 
 function void uvml_riscv_csr_user_floating_point_fflags_reg_c::build();
    
-   nx = uvml_ral_reg_field::type_id::create("nx");
+   nx = uvml_ral_reg_field_c::type_id::create("nx");
    nx.configure(
       .parent                 (this),
       .size                   (   1),
@@ -80,7 +80,7 @@ function void uvml_riscv_csr_user_floating_point_fflags_reg_c::build();
       .individually_accessible(   1)
    );
    
-   uf = uvml_ral_reg_field::type_id::create("uf");
+   uf = uvml_ral_reg_field_c::type_id::create("uf");
    uf.configure(
       .parent                 (this),
       .size                   (   1),
@@ -93,7 +93,7 @@ function void uvml_riscv_csr_user_floating_point_fflags_reg_c::build();
       .individually_accessible(   1)
    );
    
-   of = uvml_ral_reg_field::type_id::create("of");
+   of = uvml_ral_reg_field_c::type_id::create("of");
    of.configure(
       .parent                 (this),
       .size                   (   1),
@@ -106,7 +106,7 @@ function void uvml_riscv_csr_user_floating_point_fflags_reg_c::build();
       .individually_accessible(   1)
    );
    
-   dz = uvml_ral_reg_field::type_id::create("dz");
+   dz = uvml_ral_reg_field_c::type_id::create("dz");
    dz.configure(
       .parent                 (this),
       .size                   (   1),
@@ -119,7 +119,7 @@ function void uvml_riscv_csr_user_floating_point_fflags_reg_c::build();
       .individually_accessible(   1)
    );
    
-   nv = uvml_ral_reg_field::type_id::create("nv");
+   nv = uvml_ral_reg_field_c::type_id::create("nv");
    nv.configure(
       .parent                 (this),
       .size                   (   1),
@@ -132,7 +132,7 @@ function void uvml_riscv_csr_user_floating_point_fflags_reg_c::build();
       .individually_accessible(   1)
    );
    
-   xyz = uvml_ral_reg_field::type_id::create("xyz");
+   xyz = uvml_ral_reg_field_c::type_id::create("xyz");
    xyz.configure(
       .parent                 (this),
       .size                   (   3),

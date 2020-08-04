@@ -29,38 +29,38 @@ class uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  cy   ;
-   rand uvml_ral_reg_field  tm   ;
-   rand uvml_ral_reg_field  ir   ;
-   rand uvml_ral_reg_field  hpm3 ;
-   rand uvml_ral_reg_field  hpm4 ;
-   rand uvml_ral_reg_field  hpm5 ;
-   rand uvml_ral_reg_field  hpm6 ;
-   rand uvml_ral_reg_field  hpm7 ;
-   rand uvml_ral_reg_field  hpm8 ;
-   rand uvml_ral_reg_field  hpm9 ;
-   rand uvml_ral_reg_field  hpm10;
-   rand uvml_ral_reg_field  hpm11;
-   rand uvml_ral_reg_field  hpm12;
-   rand uvml_ral_reg_field  hpm13;
-   rand uvml_ral_reg_field  hpm14;
-   rand uvml_ral_reg_field  hpm15;
-   rand uvml_ral_reg_field  hpm16;
-   rand uvml_ral_reg_field  hpm17;
-   rand uvml_ral_reg_field  hpm18;
-   rand uvml_ral_reg_field  hpm19;
-   rand uvml_ral_reg_field  hpm20;
-   rand uvml_ral_reg_field  hpm21;
-   rand uvml_ral_reg_field  hpm22;
-   rand uvml_ral_reg_field  hpm23;
-   rand uvml_ral_reg_field  hpm24;
-   rand uvml_ral_reg_field  hpm25;
-   rand uvml_ral_reg_field  hpm26;
-   rand uvml_ral_reg_field  hpm27;
-   rand uvml_ral_reg_field  hpm28;
-   rand uvml_ral_reg_field  hpm29;
-   rand uvml_ral_reg_field  hpm30;
-   rand uvml_ral_reg_field  hpm31;
+   rand uvml_ral_reg_field_c  cy   ;
+   rand uvml_ral_reg_field_c  tm   ;
+   rand uvml_ral_reg_field_c  ir   ;
+   rand uvml_ral_reg_field_c  hpm3 ;
+   rand uvml_ral_reg_field_c  hpm4 ;
+   rand uvml_ral_reg_field_c  hpm5 ;
+   rand uvml_ral_reg_field_c  hpm6 ;
+   rand uvml_ral_reg_field_c  hpm7 ;
+   rand uvml_ral_reg_field_c  hpm8 ;
+   rand uvml_ral_reg_field_c  hpm9 ;
+   rand uvml_ral_reg_field_c  hpm10;
+   rand uvml_ral_reg_field_c  hpm11;
+   rand uvml_ral_reg_field_c  hpm12;
+   rand uvml_ral_reg_field_c  hpm13;
+   rand uvml_ral_reg_field_c  hpm14;
+   rand uvml_ral_reg_field_c  hpm15;
+   rand uvml_ral_reg_field_c  hpm16;
+   rand uvml_ral_reg_field_c  hpm17;
+   rand uvml_ral_reg_field_c  hpm18;
+   rand uvml_ral_reg_field_c  hpm19;
+   rand uvml_ral_reg_field_c  hpm20;
+   rand uvml_ral_reg_field_c  hpm21;
+   rand uvml_ral_reg_field_c  hpm22;
+   rand uvml_ral_reg_field_c  hpm23;
+   rand uvml_ral_reg_field_c  hpm24;
+   rand uvml_ral_reg_field_c  hpm25;
+   rand uvml_ral_reg_field_c  hpm26;
+   rand uvml_ral_reg_field_c  hpm27;
+   rand uvml_ral_reg_field_c  hpm28;
+   rand uvml_ral_reg_field_c  hpm29;
+   rand uvml_ral_reg_field_c  hpm30;
+   rand uvml_ral_reg_field_c  hpm31;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c#(.XLEN(XLEN)))
@@ -121,7 +121,7 @@ endfunction : new
 
 function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
    
-   cy = uvml_ral_reg_field::type_id::create("cy");
+   cy = uvml_ral_reg_field_c::type_id::create("cy");
    cy.configure(
       .parent                 (this),
       .size                   (   1),
@@ -134,7 +134,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   tm = uvml_ral_reg_field::type_id::create("tm");
+   tm = uvml_ral_reg_field_c::type_id::create("tm");
    tm.configure(
       .parent                 (this),
       .size                   (   1),
@@ -147,7 +147,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   ir = uvml_ral_reg_field::type_id::create("ir");
+   ir = uvml_ral_reg_field_c::type_id::create("ir");
    ir.configure(
       .parent                 (this),
       .size                   (   1),
@@ -160,7 +160,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm3 = uvml_ral_reg_field::type_id::create("hpm3");
+   hpm3 = uvml_ral_reg_field_c::type_id::create("hpm3");
    hpm3.configure(
       .parent                 (this),
       .size                   (   1),
@@ -173,7 +173,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm4 = uvml_ral_reg_field::type_id::create("hpm4");
+   hpm4 = uvml_ral_reg_field_c::type_id::create("hpm4");
    hpm4.configure(
       .parent                 (this),
       .size                   (   1),
@@ -186,7 +186,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm5 = uvml_ral_reg_field::type_id::create("hpm5");
+   hpm5 = uvml_ral_reg_field_c::type_id::create("hpm5");
    hpm5.configure(
       .parent                 (this),
       .size                   (   1),
@@ -199,7 +199,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm6 = uvml_ral_reg_field::type_id::create("hpm6");
+   hpm6 = uvml_ral_reg_field_c::type_id::create("hpm6");
    hpm6.configure(
       .parent                 (this),
       .size                   (   1),
@@ -212,7 +212,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm7 = uvml_ral_reg_field::type_id::create("hpm7");
+   hpm7 = uvml_ral_reg_field_c::type_id::create("hpm7");
    hpm7.configure(
       .parent                 (this),
       .size                   (   1),
@@ -225,7 +225,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm8 = uvml_ral_reg_field::type_id::create("hpm8");
+   hpm8 = uvml_ral_reg_field_c::type_id::create("hpm8");
    hpm8.configure(
       .parent                 (this),
       .size                   (   1),
@@ -238,7 +238,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm9 = uvml_ral_reg_field::type_id::create("hpm9");
+   hpm9 = uvml_ral_reg_field_c::type_id::create("hpm9");
    hpm9.configure(
       .parent                 (this),
       .size                   (   1),
@@ -251,7 +251,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm10 = uvml_ral_reg_field::type_id::create("hpm10");
+   hpm10 = uvml_ral_reg_field_c::type_id::create("hpm10");
    hpm10.configure(
       .parent                 (this),
       .size                   (   1),
@@ -264,7 +264,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm11 = uvml_ral_reg_field::type_id::create("hpm11");
+   hpm11 = uvml_ral_reg_field_c::type_id::create("hpm11");
    hpm11.configure(
       .parent                 (this),
       .size                   (   1),
@@ -277,7 +277,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm12 = uvml_ral_reg_field::type_id::create("hpm12");
+   hpm12 = uvml_ral_reg_field_c::type_id::create("hpm12");
    hpm12.configure(
       .parent                 (this),
       .size                   (   1),
@@ -290,7 +290,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm13 = uvml_ral_reg_field::type_id::create("hpm13");
+   hpm13 = uvml_ral_reg_field_c::type_id::create("hpm13");
    hpm13.configure(
       .parent                 (this),
       .size                   (   1),
@@ -303,7 +303,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm14 = uvml_ral_reg_field::type_id::create("hpm14");
+   hpm14 = uvml_ral_reg_field_c::type_id::create("hpm14");
    hpm14.configure(
       .parent                 (this),
       .size                   (   1),
@@ -316,7 +316,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm15 = uvml_ral_reg_field::type_id::create("hpm15");
+   hpm15 = uvml_ral_reg_field_c::type_id::create("hpm15");
    hpm15.configure(
       .parent                 (this),
       .size                   (   1),
@@ -329,7 +329,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm16 = uvml_ral_reg_field::type_id::create("hpm16");
+   hpm16 = uvml_ral_reg_field_c::type_id::create("hpm16");
    hpm16.configure(
       .parent                 (this),
       .size                   (   1),
@@ -342,7 +342,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm17 = uvml_ral_reg_field::type_id::create("hpm17");
+   hpm17 = uvml_ral_reg_field_c::type_id::create("hpm17");
    hpm17.configure(
       .parent                 (this),
       .size                   (   1),
@@ -355,7 +355,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm18 = uvml_ral_reg_field::type_id::create("hpm18");
+   hpm18 = uvml_ral_reg_field_c::type_id::create("hpm18");
    hpm18.configure(
       .parent                 (this),
       .size                   (   1),
@@ -368,7 +368,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm19 = uvml_ral_reg_field::type_id::create("hpm19");
+   hpm19 = uvml_ral_reg_field_c::type_id::create("hpm19");
    hpm19.configure(
       .parent                 (this),
       .size                   (   1),
@@ -381,7 +381,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm20 = uvml_ral_reg_field::type_id::create("hpm20");
+   hpm20 = uvml_ral_reg_field_c::type_id::create("hpm20");
    hpm20.configure(
       .parent                 (this),
       .size                   (   1),
@@ -394,7 +394,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm21 = uvml_ral_reg_field::type_id::create("hpm21");
+   hpm21 = uvml_ral_reg_field_c::type_id::create("hpm21");
    hpm21.configure(
       .parent                 (this),
       .size                   (   1),
@@ -407,7 +407,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm22 = uvml_ral_reg_field::type_id::create("hpm22");
+   hpm22 = uvml_ral_reg_field_c::type_id::create("hpm22");
    hpm22.configure(
       .parent                 (this),
       .size                   (   1),
@@ -420,7 +420,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm23 = uvml_ral_reg_field::type_id::create("hpm23");
+   hpm23 = uvml_ral_reg_field_c::type_id::create("hpm23");
    hpm23.configure(
       .parent                 (this),
       .size                   (   1),
@@ -433,7 +433,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm24 = uvml_ral_reg_field::type_id::create("hpm24");
+   hpm24 = uvml_ral_reg_field_c::type_id::create("hpm24");
    hpm24.configure(
       .parent                 (this),
       .size                   (   1),
@@ -446,7 +446,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm25 = uvml_ral_reg_field::type_id::create("hpm25");
+   hpm25 = uvml_ral_reg_field_c::type_id::create("hpm25");
    hpm25.configure(
       .parent                 (this),
       .size                   (   1),
@@ -459,7 +459,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm26 = uvml_ral_reg_field::type_id::create("hpm26");
+   hpm26 = uvml_ral_reg_field_c::type_id::create("hpm26");
    hpm26.configure(
       .parent                 (this),
       .size                   (   1),
@@ -472,7 +472,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm27 = uvml_ral_reg_field::type_id::create("hpm27");
+   hpm27 = uvml_ral_reg_field_c::type_id::create("hpm27");
    hpm27.configure(
       .parent                 (this),
       .size                   (   1),
@@ -485,7 +485,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm28 = uvml_ral_reg_field::type_id::create("hpm28");
+   hpm28 = uvml_ral_reg_field_c::type_id::create("hpm28");
    hpm28.configure(
       .parent                 (this),
       .size                   (   1),
@@ -498,7 +498,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm29 = uvml_ral_reg_field::type_id::create("hpm29");
+   hpm29 = uvml_ral_reg_field_c::type_id::create("hpm29");
    hpm29.configure(
       .parent                 (this),
       .size                   (   1),
@@ -511,7 +511,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm30 = uvml_ral_reg_field::type_id::create("hpm30");
+   hpm30 = uvml_ral_reg_field_c::type_id::create("hpm30");
    hpm30.configure(
       .parent                 (this),
       .size                   (   1),
@@ -524,7 +524,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c::build();
       .individually_accessible(   1)
    );
    
-   hpm31 = uvml_ral_reg_field::type_id::create("hpm31");
+   hpm31 = uvml_ral_reg_field_c::type_id::create("hpm31");
    hpm31.configure(
       .parent                 (this),
       .size                   (   1),

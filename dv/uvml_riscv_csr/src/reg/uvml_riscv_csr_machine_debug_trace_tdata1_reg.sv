@@ -29,9 +29,9 @@ class uvml_riscv_csr_machine_debug_trace_tdata1_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  data ;
-   rand uvml_ral_reg_field  dmode;
-   rand uvml_ral_reg_field  type_;
+   rand uvml_ral_reg_field_c  data ;
+   rand uvml_ral_reg_field_c  dmode;
+   rand uvml_ral_reg_field_c  type_;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_debug_trace_tdata1_reg_c#(.XLEN(XLEN)))
@@ -63,7 +63,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_debug_trace_tdata1_reg_c::build();
    
-   data = uvml_ral_reg_field::type_id::create("data");
+   data = uvml_ral_reg_field_c::type_id::create("data");
    data.configure(
       .parent                 (  this),
       .size                   (XLEN-5),
@@ -76,7 +76,7 @@ function void uvml_riscv_csr_machine_debug_trace_tdata1_reg_c::build();
       .individually_accessible(     1)
    );
    
-   dmode = uvml_ral_reg_field::type_id::create("dmode");
+   dmode = uvml_ral_reg_field_c::type_id::create("dmode");
    dmode.configure(
       .parent                 (  this),
       .size                   (     1),
@@ -89,7 +89,7 @@ function void uvml_riscv_csr_machine_debug_trace_tdata1_reg_c::build();
       .individually_accessible(     1)
    );
    
-   type_ = uvml_ral_reg_field::type_id::create("type");
+   type_ = uvml_ral_reg_field_c::type_id::create("type");
    type_.configure(
       .parent                 (  this),
       .size                   (     4),

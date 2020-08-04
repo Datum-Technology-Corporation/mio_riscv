@@ -29,14 +29,14 @@ class uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  pmp8cfg ;
-   rand uvml_ral_reg_field  pmp9cfg ;
-   rand uvml_ral_reg_field  pmp10cfg;
-   rand uvml_ral_reg_field  pmp11cfg;
-   rand uvml_ral_reg_field  pmp12cfg;
-   rand uvml_ral_reg_field  pmp13cfg;
-   rand uvml_ral_reg_field  pmp14cfg;
-   rand uvml_ral_reg_field  pmp15cfg;
+   rand uvml_ral_reg_field_c  pmp8cfg ;
+   rand uvml_ral_reg_field_c  pmp9cfg ;
+   rand uvml_ral_reg_field_c  pmp10cfg;
+   rand uvml_ral_reg_field_c  pmp11cfg;
+   rand uvml_ral_reg_field_c  pmp12cfg;
+   rand uvml_ral_reg_field_c  pmp13cfg;
+   rand uvml_ral_reg_field_c  pmp14cfg;
+   rand uvml_ral_reg_field_c  pmp15cfg;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c#(.XLEN(XLEN)))
@@ -73,7 +73,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c::build();
    
-   pmp8cfg = uvml_ral_reg_field::type_id::create("pmp8cfg");
+   pmp8cfg = uvml_ral_reg_field_c::type_id::create("pmp8cfg");
    pmp8cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -86,7 +86,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp9cfg = uvml_ral_reg_field::type_id::create("pmp9cfg");
+   pmp9cfg = uvml_ral_reg_field_c::type_id::create("pmp9cfg");
    pmp9cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -99,7 +99,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp10cfg = uvml_ral_reg_field::type_id::create("pmp10cfg");
+   pmp10cfg = uvml_ral_reg_field_c::type_id::create("pmp10cfg");
    pmp10cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -112,7 +112,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp11cfg = uvml_ral_reg_field::type_id::create("pmp11cfg");
+   pmp11cfg = uvml_ral_reg_field_c::type_id::create("pmp11cfg");
    pmp11cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -125,7 +125,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp12cfg = uvml_ral_reg_field::type_id::create("pmp12cfg");
+   pmp12cfg = uvml_ral_reg_field_c::type_id::create("pmp12cfg");
    pmp12cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -138,7 +138,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp13cfg = uvml_ral_reg_field::type_id::create("pmp13cfg");
+   pmp13cfg = uvml_ral_reg_field_c::type_id::create("pmp13cfg");
    pmp13cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -151,7 +151,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp14cfg = uvml_ral_reg_field::type_id::create("pmp14cfg");
+   pmp14cfg = uvml_ral_reg_field_c::type_id::create("pmp14cfg");
    pmp14cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -164,7 +164,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg2_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp15cfg = uvml_ral_reg_field::type_id::create("pmp15cfg");
+   pmp15cfg = uvml_ral_reg_field_c::type_id::create("pmp15cfg");
    pmp15cfg.configure(
       .parent                 (this),
       .size                   (   8),

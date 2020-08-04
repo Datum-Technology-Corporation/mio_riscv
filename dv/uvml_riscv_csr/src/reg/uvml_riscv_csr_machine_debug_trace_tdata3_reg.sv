@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_debug_trace_tdata3_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  data ;
+   rand uvml_ral_reg_field_c  data ;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_debug_trace_tdata3_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_debug_trace_tdata3_reg_c::build();
    
-   data = uvml_ral_reg_field::type_id::create("data");
+   data = uvml_ral_reg_field_c::type_id::create("data");
    data.configure(
       .parent                 (this),
       .size                   (XLEN),

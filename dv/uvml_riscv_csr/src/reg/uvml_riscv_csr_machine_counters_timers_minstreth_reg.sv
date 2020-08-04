@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_counters_timers_minstreth_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  minstreth;
+   rand uvml_ral_reg_field_c  minstreth;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_counters_timers_minstreth_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_counters_timers_minstreth_reg_c::build();
    
-   minstreth = uvml_ral_reg_field::type_id::create("minstreth");
+   minstreth = uvml_ral_reg_field_c::type_id::create("minstreth");
    minstreth.configure(
       .parent                 (this),
       .size                   (XLEN),

@@ -29,25 +29,25 @@ class uvml_riscv_csr_machine_trap_setup_mstatus_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  uie ;
-   rand uvml_ral_reg_field  sie ;
-   rand uvml_ral_reg_field  mie ;
-   rand uvml_ral_reg_field  upie;
-   rand uvml_ral_reg_field  spie;
-   rand uvml_ral_reg_field  mpie;
-   rand uvml_ral_reg_field  spp ;
-   rand uvml_ral_reg_field  mpp ;
-   rand uvml_ral_reg_field  fs  ;
-   rand uvml_ral_reg_field  xs  ;
-   rand uvml_ral_reg_field  mprv;
-   rand uvml_ral_reg_field  sum ;
-   rand uvml_ral_reg_field  mxr ;
-   rand uvml_ral_reg_field  tvm ;
-   rand uvml_ral_reg_field  tw  ;
-   rand uvml_ral_reg_field  tsr ;
-   rand uvml_ral_reg_field  uxl ;
-   rand uvml_ral_reg_field  sxl ;
-   rand uvml_ral_reg_field  sd  ;
+   rand uvml_ral_reg_field_c  uie ;
+   rand uvml_ral_reg_field_c  sie ;
+   rand uvml_ral_reg_field_c  mie ;
+   rand uvml_ral_reg_field_c  upie;
+   rand uvml_ral_reg_field_c  spie;
+   rand uvml_ral_reg_field_c  mpie;
+   rand uvml_ral_reg_field_c  spp ;
+   rand uvml_ral_reg_field_c  mpp ;
+   rand uvml_ral_reg_field_c  fs  ;
+   rand uvml_ral_reg_field_c  xs  ;
+   rand uvml_ral_reg_field_c  mprv;
+   rand uvml_ral_reg_field_c  sum ;
+   rand uvml_ral_reg_field_c  mxr ;
+   rand uvml_ral_reg_field_c  tvm ;
+   rand uvml_ral_reg_field_c  tw  ;
+   rand uvml_ral_reg_field_c  tsr ;
+   rand uvml_ral_reg_field_c  uxl ;
+   rand uvml_ral_reg_field_c  sxl ;
+   rand uvml_ral_reg_field_c  sd  ;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_setup_mstatus_reg_c#(.XLEN(XLEN)))
@@ -95,7 +95,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
    
-   uie = uvml_ral_reg_field::type_id::create("uie");
+   uie = uvml_ral_reg_field_c::type_id::create("uie");
    uie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -108,7 +108,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   sie = uvml_ral_reg_field::type_id::create("sie");
+   sie = uvml_ral_reg_field_c::type_id::create("sie");
    sie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -121,7 +121,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mie = uvml_ral_reg_field::type_id::create("mie");
+   mie = uvml_ral_reg_field_c::type_id::create("mie");
    mie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -134,7 +134,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   upie = uvml_ral_reg_field::type_id::create("upie");
+   upie = uvml_ral_reg_field_c::type_id::create("upie");
    upie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -147,7 +147,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   spie = uvml_ral_reg_field::type_id::create("spie");
+   spie = uvml_ral_reg_field_c::type_id::create("spie");
    spie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -160,7 +160,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mpie = uvml_ral_reg_field::type_id::create("mpie");
+   mpie = uvml_ral_reg_field_c::type_id::create("mpie");
    mpie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -173,7 +173,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   spp = uvml_ral_reg_field::type_id::create("spp");
+   spp = uvml_ral_reg_field_c::type_id::create("spp");
    spp.configure(
       .parent                 (this),
       .size                   (   1),
@@ -186,7 +186,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mpp = uvml_ral_reg_field::type_id::create("");
+   mpp = uvml_ral_reg_field_c::type_id::create("");
    mpp.configure(
       .parent                 (this),
       .size                   (   2),
@@ -199,7 +199,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   fs = uvml_ral_reg_field::type_id::create("fs");
+   fs = uvml_ral_reg_field_c::type_id::create("fs");
    fs.configure(
       .parent                 (this),
       .size                   (   2),
@@ -212,7 +212,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   xs = uvml_ral_reg_field::type_id::create("xs");
+   xs = uvml_ral_reg_field_c::type_id::create("xs");
    xs.configure(
       .parent                 (this),
       .size                   (   2),
@@ -225,7 +225,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mprv = uvml_ral_reg_field::type_id::create("mprv");
+   mprv = uvml_ral_reg_field_c::type_id::create("mprv");
    mprv.configure(
       .parent                 (this),
       .size                   (   1),
@@ -238,7 +238,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   sum = uvml_ral_reg_field::type_id::create("sum");
+   sum = uvml_ral_reg_field_c::type_id::create("sum");
    sum.configure(
       .parent                 (this),
       .size                   (   1),
@@ -251,7 +251,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mxr = uvml_ral_reg_field::type_id::create("mxr");
+   mxr = uvml_ral_reg_field_c::type_id::create("mxr");
    mxr.configure(
       .parent                 (this),
       .size                   (   1),
@@ -264,7 +264,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   tvm = uvml_ral_reg_field::type_id::create("tvm");
+   tvm = uvml_ral_reg_field_c::type_id::create("tvm");
    tvm.configure(
       .parent                 (this),
       .size                   (   1),
@@ -277,7 +277,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   tw = uvml_ral_reg_field::type_id::create("tw");
+   tw = uvml_ral_reg_field_c::type_id::create("tw");
    tw.configure(
       .parent                 (this),
       .size                   (   1),
@@ -290,7 +290,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       .individually_accessible(   1)
    );
    
-   tsr = uvml_ral_reg_field::type_id::create("tsr");
+   tsr = uvml_ral_reg_field_c::type_id::create("tsr");
    tsr.configure(
       .parent                 (this),
       .size                   (   1),
@@ -305,7 +305,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
    
    case (XLEN)
       64: begin
-         uxl = uvml_ral_reg_field::type_id::create("uxl");
+         uxl = uvml_ral_reg_field_c::type_id::create("uxl");
          uxl.configure(
             .parent                 (this),
             .size                   (   2),
@@ -318,7 +318,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
             .individually_accessible(   1)
          );
          
-         sxl = uvml_ral_reg_field::type_id::create("sxl");
+         sxl = uvml_ral_reg_field_c::type_id::create("sxl");
          sxl.configure(
             .parent                 (this),
             .size                   (   2),
@@ -333,7 +333,7 @@ function void uvml_riscv_csr_machine_trap_setup_mstatus_reg_c::build();
       end
    endcase
    
-   sd = uvml_ral_reg_field::type_id::create("sd");
+   sd = uvml_ral_reg_field_c::type_id::create("sd");
    sd.configure(
       .parent                 (  this),
       .size                   (     1),

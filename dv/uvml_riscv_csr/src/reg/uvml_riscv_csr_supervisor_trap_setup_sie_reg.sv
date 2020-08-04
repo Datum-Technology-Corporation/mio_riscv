@@ -29,14 +29,14 @@ class uvml_riscv_csr_supervisor_trap_setup_sie_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  usie;
-   rand uvml_ral_reg_field  ssie;
-   rand uvml_ral_reg_field  msie;
-   rand uvml_ral_reg_field  utie;
-   rand uvml_ral_reg_field  stie;
-   rand uvml_ral_reg_field  mtie;
-   rand uvml_ral_reg_field  ueie;
-   rand uvml_ral_reg_field  seie;
+   rand uvml_ral_reg_field_c  usie;
+   rand uvml_ral_reg_field_c  ssie;
+   rand uvml_ral_reg_field_c  msie;
+   rand uvml_ral_reg_field_c  utie;
+   rand uvml_ral_reg_field_c  stie;
+   rand uvml_ral_reg_field_c  mtie;
+   rand uvml_ral_reg_field_c  ueie;
+   rand uvml_ral_reg_field_c  seie;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_supervisor_trap_setup_sie_reg_c#(.XLEN(XLEN)))
@@ -73,7 +73,7 @@ endfunction : new
 
 function void uvml_riscv_csr_supervisor_trap_setup_sie_reg_c::build();
    
-   usie = uvml_ral_reg_field::type_id::create("usie");
+   usie = uvml_ral_reg_field_c::type_id::create("usie");
    usie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -86,7 +86,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   ssie = uvml_ral_reg_field::type_id::create("ssie");
+   ssie = uvml_ral_reg_field_c::type_id::create("ssie");
    ssie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -99,7 +99,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   msie = uvml_ral_reg_field::type_id::create("msie");
+   msie = uvml_ral_reg_field_c::type_id::create("msie");
    msie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -112,7 +112,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   utie = uvml_ral_reg_field::type_id::create("utie");
+   utie = uvml_ral_reg_field_c::type_id::create("utie");
    utie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -125,7 +125,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   stie = uvml_ral_reg_field::type_id::create("stie");
+   stie = uvml_ral_reg_field_c::type_id::create("stie");
    stie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -138,7 +138,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mtie = uvml_ral_reg_field::type_id::create("mtie");
+   mtie = uvml_ral_reg_field_c::type_id::create("mtie");
    mtie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -151,7 +151,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   ueie = uvml_ral_reg_field::type_id::create("ueie");
+   ueie = uvml_ral_reg_field_c::type_id::create("ueie");
    ueie.configure(
       .parent                 (this),
       .size                   (   1),
@@ -164,7 +164,7 @@ function void uvml_riscv_csr_supervisor_trap_setup_sie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   seie = uvml_ral_reg_field::type_id::create("seie");
+   seie = uvml_ral_reg_field_c::type_id::create("seie");
    seie.configure(
       .parent                 (this),
       .size                   (   1),

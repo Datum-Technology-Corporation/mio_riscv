@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_information_mhartid_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  hart_id;
+   rand uvml_ral_reg_field_c  hart_id;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_information_mhartid_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_information_mhartid_reg_c::build();
    
-   hart_id = uvml_ral_reg_field::type_id::create("hart_id");
+   hart_id = uvml_ral_reg_field_c::type_id::create("hart_id");
    hart_id.configure(
       .parent                 (this),
       .size                   (XLEN),

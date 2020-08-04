@@ -29,9 +29,9 @@ class uvml_riscv_csr_supervisor_protection_and_translation_satp_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  ppn ;
-   rand uvml_ral_reg_field  asid;
-   rand uvml_ral_reg_field  mode;
+   rand uvml_ral_reg_field_c  ppn ;
+   rand uvml_ral_reg_field_c  asid;
+   rand uvml_ral_reg_field_c  mode;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_supervisor_protection_and_translation_satp_reg_c#(.XLEN(XLEN)))
@@ -84,7 +84,7 @@ function void uvml_riscv_csr_supervisor_protection_and_translation_satp_reg_c::b
       end
    endcase
    
-   ppn = uvml_ral_reg_field::type_id::create("ppn");
+   ppn = uvml_ral_reg_field_c::type_id::create("ppn");
    ppn.configure(
       .parent                 (    this),
       .size                   (ppn_size),
@@ -97,7 +97,7 @@ function void uvml_riscv_csr_supervisor_protection_and_translation_satp_reg_c::b
       .individually_accessible(       1)
    );
    
-   asid = uvml_ral_reg_field::type_id::create("asid");
+   asid = uvml_ral_reg_field_c::type_id::create("asid");
    asid.configure(
       .parent                 (     this),
       .size                   (asid_size),
@@ -110,7 +110,7 @@ function void uvml_riscv_csr_supervisor_protection_and_translation_satp_reg_c::b
       .individually_accessible(        1)
    );
    
-   mode = uvml_ral_reg_field::type_id::create("mode");
+   mode = uvml_ral_reg_field_c::type_id::create("mode");
    mode.configure(
       .parent                 (     this),
       .size                   (mode_size),

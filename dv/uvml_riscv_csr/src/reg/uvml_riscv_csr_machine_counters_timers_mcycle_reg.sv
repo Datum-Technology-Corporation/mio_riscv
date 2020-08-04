@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_counters_timers_mcycle_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  mcycle;
+   rand uvml_ral_reg_field_c  mcycle;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_counters_timers_mcycle_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_counters_timers_mcycle_reg_c::build();
    
-   mcycle = uvml_ral_reg_field::type_id::create("mcycle");
+   mcycle = uvml_ral_reg_field_c::type_id::create("mcycle");
    mcycle.configure(
       .parent                 (this),
       .size                   (XLEN),

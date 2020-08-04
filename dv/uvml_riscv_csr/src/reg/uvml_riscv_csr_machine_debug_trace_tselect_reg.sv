@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_debug_trace_tselect_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  index;
+   rand uvml_ral_reg_field_c  index;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_debug_trace_tselect_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_debug_trace_tselect_reg_c::build();
    
-   index = uvml_ral_reg_field::type_id::create("index");
+   index = uvml_ral_reg_field_c::type_id::create("index");
    index.configure(
       .parent                 (this),
       .size                   (XLEN),

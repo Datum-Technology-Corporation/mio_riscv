@@ -29,10 +29,10 @@ class uvml_riscv_csr_machine_memory_protection_rv32_pmpcfg3_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  pmp12cfg ;
-   rand uvml_ral_reg_field  pmp13cfg ;
-   rand uvml_ral_reg_field  pmp14cfg;
-   rand uvml_ral_reg_field  pmp15cfg;
+   rand uvml_ral_reg_field_c  pmp12cfg ;
+   rand uvml_ral_reg_field_c  pmp13cfg ;
+   rand uvml_ral_reg_field_c  pmp14cfg;
+   rand uvml_ral_reg_field_c  pmp15cfg;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_memory_protection_rv32_pmpcfg3_reg_c#(.XLEN(XLEN)))
@@ -65,7 +65,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_memory_protection_rv32_pmpcfg3_reg_c::build();
    
-   pmp12cfg = uvml_ral_reg_field::type_id::create("pmp12cfg");
+   pmp12cfg = uvml_ral_reg_field_c::type_id::create("pmp12cfg");
    pmp12cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -78,7 +78,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv32_pmpcfg3_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp13cfg = uvml_ral_reg_field::type_id::create("pmp13cfg");
+   pmp13cfg = uvml_ral_reg_field_c::type_id::create("pmp13cfg");
    pmp13cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -91,7 +91,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv32_pmpcfg3_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp14cfg = uvml_ral_reg_field::type_id::create("pmp14cfg");
+   pmp14cfg = uvml_ral_reg_field_c::type_id::create("pmp14cfg");
    pmp14cfg.configure(
       .parent                 (this),
       .size                   (   8),
@@ -104,7 +104,7 @@ function void uvml_riscv_csr_machine_memory_protection_rv32_pmpcfg3_reg_c::build
       .individually_accessible(   1)
    );
    
-   pmp15cfg = uvml_ral_reg_field::type_id::create("pmp15cfg");
+   pmp15cfg = uvml_ral_reg_field_c::type_id::create("pmp15cfg");
    pmp15cfg.configure(
       .parent                 (this),
       .size                   (   8),

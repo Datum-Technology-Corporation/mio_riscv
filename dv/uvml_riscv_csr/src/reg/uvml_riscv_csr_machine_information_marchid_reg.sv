@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_information_marchid_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  architecture_id;
+   rand uvml_ral_reg_field_c  architecture_id;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_information_marchid_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_information_marchid_reg_c::build();
    
-   architecture_id = uvml_ral_reg_field::type_id::create("architecture_id");
+   architecture_id = uvml_ral_reg_field_c::type_id::create("architecture_id");
    architecture_id.configure(
       .parent                 (this),
       .size                   (XLEN),

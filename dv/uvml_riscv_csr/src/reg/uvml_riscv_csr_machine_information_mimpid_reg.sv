@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_information_mimpid_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  implementation;
+   rand uvml_ral_reg_field_c  implementation;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_information_mimpid_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_information_mimpid_reg_c::build();
    
-   implementation = uvml_ral_reg_field::type_id::create("implementation");
+   implementation = uvml_ral_reg_field_c::type_id::create("implementation");
    implementation.configure(
       .parent                 (this),
       .size                   (XLEN),

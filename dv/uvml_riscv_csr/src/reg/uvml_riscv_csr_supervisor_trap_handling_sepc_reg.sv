@@ -29,7 +29,7 @@ class uvml_riscv_csr_supervisor_trap_handling_sepc_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  sepc;
+   rand uvml_ral_reg_field_c  sepc;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_supervisor_trap_handling_sepc_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_supervisor_trap_handling_sepc_reg_c::build();
    
-   sepc = uvml_ral_reg_field::type_id::create("sepc");
+   sepc = uvml_ral_reg_field_c::type_id::create("sepc");
    sepc.configure(
       .parent                 (this),
       .size                   (XLEN),

@@ -27,7 +27,7 @@ class uvml_riscv_csr_user_floating_point_frm_reg_c#(
    int unsigned XLEN = 32
 ) extends uvml_riscv_csr_base_reg_c;
    
-   rand uvml_ral_reg_field  rounding_mode;
+   rand uvml_ral_reg_field_c  rounding_mode;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_user_floating_point_frm_reg_c#(.XLEN(XLEN)))
@@ -57,7 +57,7 @@ endfunction : new
 
 function void uvml_riscv_csr_user_floating_point_frm_reg_c::build();
    
-   rounding_mode = uvml_ral_reg_field::type_id::create("rounding_mode");
+   rounding_mode = uvml_ral_reg_field_c::type_id::create("rounding_mode");
    rounding_mode.configure(
       .parent                 (this),
       .size                   (   3),

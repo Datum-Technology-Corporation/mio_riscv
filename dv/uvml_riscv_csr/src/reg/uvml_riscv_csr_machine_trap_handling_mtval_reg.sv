@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_trap_handling_mtval_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  mtval;
+   rand uvml_ral_reg_field_c  mtval;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_handling_mtval_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_trap_handling_mtval_reg_c::build();
    
-   mtval = uvml_ral_reg_field::type_id::create("mtval");
+   mtval = uvml_ral_reg_field_c::type_id::create("mtval");
    mtval.configure(
       .parent                 (this),
       .size                   (XLEN),

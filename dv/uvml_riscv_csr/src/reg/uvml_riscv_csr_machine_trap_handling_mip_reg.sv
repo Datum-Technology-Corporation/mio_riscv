@@ -29,15 +29,15 @@ class uvml_riscv_csr_machine_trap_handling_mie_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  usip;
-   rand uvml_ral_reg_field  ssip;
-   rand uvml_ral_reg_field  msip;
-   rand uvml_ral_reg_field  utip;
-   rand uvml_ral_reg_field  stip;
-   rand uvml_ral_reg_field  mtip;
-   rand uvml_ral_reg_field  ueip;
-   rand uvml_ral_reg_field  seip;
-   rand uvml_ral_reg_field  meip;
+   rand uvml_ral_reg_field_c  usip;
+   rand uvml_ral_reg_field_c  ssip;
+   rand uvml_ral_reg_field_c  msip;
+   rand uvml_ral_reg_field_c  utip;
+   rand uvml_ral_reg_field_c  stip;
+   rand uvml_ral_reg_field_c  mtip;
+   rand uvml_ral_reg_field_c  ueip;
+   rand uvml_ral_reg_field_c  seip;
+   rand uvml_ral_reg_field_c  meip;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_handling_mie_reg_c#(.XLEN(XLEN)))
@@ -75,7 +75,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
    
-   usip = uvml_ral_reg_field::type_id::create("usip");
+   usip = uvml_ral_reg_field_c::type_id::create("usip");
    usip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -88,7 +88,7 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   ssip = uvml_ral_reg_field::type_id::create("ssip");
+   ssip = uvml_ral_reg_field_c::type_id::create("ssip");
    ssip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -101,7 +101,7 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   msip = uvml_ral_reg_field::type_id::create("msip");
+   msip = uvml_ral_reg_field_c::type_id::create("msip");
    msip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -114,7 +114,7 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   utip = uvml_ral_reg_field::type_id::create("utip");
+   utip = uvml_ral_reg_field_c::type_id::create("utip");
    utip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -127,7 +127,7 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   stip = uvml_ral_reg_field::type_id::create("stip");
+   stip = uvml_ral_reg_field_c::type_id::create("stip");
    stip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -140,7 +140,7 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   mtip = uvml_ral_reg_field::type_id::create("mtip");
+   mtip = uvml_ral_reg_field_c::type_id::create("mtip");
    mtip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -153,7 +153,7 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   ueip = uvml_ral_reg_field::type_id::create("ueip");
+   ueip = uvml_ral_reg_field_c::type_id::create("ueip");
    ueip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -166,7 +166,7 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   seip = uvml_ral_reg_field::type_id::create("seip");
+   seip = uvml_ral_reg_field_c::type_id::create("seip");
    seip.configure(
       .parent                 (this),
       .size                   (   1),
@@ -179,7 +179,7 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
       .individually_accessible(   1)
    );
    
-   meip = uvml_ral_reg_field::type_id::create("meip");
+   meip = uvml_ral_reg_field_c::type_id::create("meip");
    meip.configure(
       .parent                 (this),
       .size                   (   1),

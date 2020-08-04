@@ -29,7 +29,7 @@ class uvml_riscv_csr_machine_counters_timers_mhpmcounter_reg_c#(
    .XLEN(XLEN)
 );
    
-   rand uvml_ral_reg_field  mhpmcounter;
+   rand uvml_ral_reg_field_c  mhpmcounter;
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_machine_counters_timers_mhpmcounter_reg_c#(.XLEN(XLEN)))
@@ -59,7 +59,7 @@ endfunction : new
 
 function void uvml_riscv_csr_machine_counters_timers_mhpmcounter_reg_c::build();
    
-   mhpmcounter = uvml_ral_reg_field::type_id::create("mhpmcounter");
+   mhpmcounter = uvml_ral_reg_field_c::type_id::create("mhpmcounter");
    mhpmcounter.configure(
       .parent                 (this),
       .size                   (XLEN),
