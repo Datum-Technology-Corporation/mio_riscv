@@ -23,7 +23,7 @@
 /**
  * Register block for RISC-V User Counter/Timers CSRs, Version 1.11.
  */
-class uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c extends uvml_riscv_csr_machine_counters_timers_base_reg_block_c#(
+class uvml_riscv_csr_machine_counters_timers_rv32_reg_block_c extends uvml_riscv_csr_machine_counters_timers_base_reg_block_c#(
    .XLEN(32)
 );
    
@@ -61,7 +61,7 @@ class uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c extends uvml_riscv_
    rand uvml_riscv_csr_machine_counters_timers_mhpmcounterh_reg_c#(XLEN)  mhpmcounter31h; ///< Upper 32 bits of mhpmcounter31, RV32I only.
    
    
-   `uvm_object_utils_begin(uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c)
+   `uvm_object_utils_begin(uvml_riscv_csr_machine_counters_timers_rv32_reg_block_c)
       `uvm_field_object(mcycleh       , UVM_DEFAULT)
       `uvm_field_object(minstreth     , UVM_DEFAULT)
       `uvm_field_object(mhpmcounter3h , UVM_DEFAULT)
@@ -99,7 +99,7 @@ class uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c extends uvml_riscv_
    /**
     * Default constructor.
     */
-   extern function new(string name="uvml_riscv_csr_machine_counter_timers_rv32_reg_block", int has_coverage=UVM_NO_COVERAGE);
+   extern function new(string name="uvml_riscv_csr_machine_counters_timers_rv32_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
    /**
     * Creates register(s).
@@ -111,17 +111,17 @@ class uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c extends uvml_riscv_
     */
    extern virtual function void add_regs_to_map();
    
-endclass : uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c
+endclass : uvml_riscv_csr_machine_counters_timers_rv32_reg_block_c
 
 
-function uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c::new(string name="uvml_riscv_csr_machine_counter_timers_rv32_reg_block", int has_coverage=UVM_NO_COVERAGE);
+function uvml_riscv_csr_machine_counters_timers_rv32_reg_block_c::new(string name="uvml_riscv_csr_machine_counters_timers_rv32_reg_block", int has_coverage=UVM_NO_COVERAGE);
    
    super.new(name, has_coverage);
    
 endfunction : new
 
 
-function void uvml_riscv_csr_machine_counter_timers_rv32_reg_block_c::create_regs();
+function void uvml_riscv_csr_machine_counters_timers_rv32_reg_block_c::create_regs();
    
    super.create_regs();
    
