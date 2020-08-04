@@ -25,7 +25,7 @@
  */
 class uvml_riscv_csr_machine_memory_protection_rv64_pmpcfg0_reg_c#(
    int unsigned XLEN = 64
-) extends uvml_riscv_csr_ext_base_reg_c#(
+) extends uvml_riscv_csr_base_reg_c#(
    .XLEN(XLEN)
 );
    

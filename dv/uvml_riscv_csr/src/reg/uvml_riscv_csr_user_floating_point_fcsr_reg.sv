@@ -25,7 +25,7 @@
  */
 class uvml_riscv_csr_user_floating_point_fcsr_reg_c#(
    int unsigned XLEN = 32
-) extends uvml_riscv_csr_ext_base_reg_c;
+) extends uvml_riscv_csr_base_reg_c;
    
    rand uvml_ral_reg_field  fflags;
    rand uvml_ral_reg_field  frm   ;
