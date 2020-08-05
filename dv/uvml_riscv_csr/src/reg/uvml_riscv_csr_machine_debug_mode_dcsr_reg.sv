@@ -98,7 +98,7 @@ function void uvml_riscv_csr_machine_debug_mode_dcsr_reg_c::build();
    step.configure(
       .parent                 (this),
       .size                   (   1),
-      .lsb_pos                (   1),
+      .lsb_pos                (   2),
       .access                 ("RW"),
       .volatile               (   0),
       .reset                  (   0),
