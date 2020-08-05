@@ -89,7 +89,7 @@ endfunction : new
 
 function longint uvml_riscv_csr_machine_memory_protection_base_reg_block_c::get_default_base_address();
    
-   return uvml_riscv_csr_machine_memory_protection_base_reg_block_default_base_address;
+   return uvml_riscv_csr_machine_memory_protection_reg_block_default_base_address;
    
 endfunction : get_default_base_address
 
