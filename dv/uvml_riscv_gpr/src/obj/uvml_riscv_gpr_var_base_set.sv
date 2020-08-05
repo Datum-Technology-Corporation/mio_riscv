@@ -26,7 +26,7 @@
 class uvml_riscv_gpr_var_base_set_c #(
    int unsigned XLEN    = 32,
    int unsigned NUM_GPR = 32
-) extends uvm_object;
+) extends uvml_trn_mon_trn_c;
    
    // Fields
    rand logic [(XLEN-1):0]  x[NUM_GPR];

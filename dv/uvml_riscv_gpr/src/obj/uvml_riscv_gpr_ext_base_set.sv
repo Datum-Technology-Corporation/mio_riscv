@@ -23,7 +23,7 @@
 /**
  * TODO Describe uvml_riscv_gpr_ext_base_set_c
  */
-class uvml_riscv_gpr_ext_base_set_c extends uvm_object;
+class uvml_riscv_gpr_ext_base_set_c extends uvml_trn_mon_trn_c;
    
    // Fields
    uvml_version_maj_min_c  version;

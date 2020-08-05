@@ -31,6 +31,7 @@
 package uvml_riscv_gpr_pkg;
    
    import uvm_pkg         ::*;
+   import uvml_trn_pkg    ::*;
    import uvml_version_pkg::*;
    
    // Constants / Structs / Enums
