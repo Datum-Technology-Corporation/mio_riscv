@@ -132,8 +132,8 @@ function void uvml_riscv_csr_user_floating_point_fflags_reg_c::build();
       .individually_accessible(   1)
    );
    
-   xyz = uvml_ral_reg_field_c::type_id::create("xyz");
-   xyz.configure(
+   frm = uvml_ral_reg_field_c::type_id::create("frm");
+   frm.configure(
       .parent                 (this),
       .size                   (   3),
       .lsb_pos                (   5),

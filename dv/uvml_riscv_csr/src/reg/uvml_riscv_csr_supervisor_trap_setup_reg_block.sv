@@ -30,12 +30,12 @@ class uvml_riscv_csr_supervisor_trap_setup_reg_block_c#(
 );
    
    // Registers
-   rand uvml_riscv_csr_supervisor_sstatus_reg_c   #(XLEN)  sstatus   ; ///< Supervisor status register.
-   rand uvml_riscv_csr_supervisor_sedeleg_reg_c   #(XLEN)  sedeleg   ; ///< Supervisor exception delegation register.
-   rand uvml_riscv_csr_supervisor_sideleg_reg_c   #(XLEN)  sideleg   ; ///< Supervisor interrupt delegation register.
-   rand uvml_riscv_csr_supervisor_sie_reg_c       #(XLEN)  sie       ; ///< Supervisor interrupt-enable register.
-   rand uvml_riscv_csr_supervisor_stvec_reg_c     #(XLEN)  stvec     ; ///< Supervisor trap handler base address.
-   rand uvml_riscv_csr_supervisor_scounteren_reg_c#(XLEN)  scounteren; ///< Supervisor counter enable.
+   rand uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c   #(XLEN)  sstatus   ; ///< Supervisor status register.
+   rand uvml_riscv_csr_supervisor_trap_setup_sedeleg_reg_c   #(XLEN)  sedeleg   ; ///< Supervisor exception delegation register.
+   rand uvml_riscv_csr_supervisor_trap_setup_sideleg_reg_c   #(XLEN)  sideleg   ; ///< Supervisor interrupt delegation register.
+   rand uvml_riscv_csr_supervisor_trap_setup_sie_reg_c       #(XLEN)  sie       ; ///< Supervisor interrupt-enable register.
+   rand uvml_riscv_csr_supervisor_trap_setup_stvec_reg_c     #(XLEN)  stvec     ; ///< Supervisor trap handler base address.
+   rand uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c#(XLEN)  scounteren; ///< Supervisor counter enable.
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_supervisor_trap_setup_reg_block_c#(.XLEN(XLEN)))
@@ -92,27 +92,27 @@ endfunction : get_default_base_address
 
 function void uvml_riscv_csr_supervisor_trap_setup_reg_block_c::create_regs();
    
-   sstatus = uvml_riscv_csr_supervisor_sstatus_reg_c#(XLEN)::type_id::create("sstatus");
+   sstatus = uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c#(XLEN)::type_id::create("sstatus");
    sstatus.configure(this);
    sstatus.build();
    
-   sedeleg = uvml_riscv_csr_supervisor_sedeleg_reg_c#(XLEN)::type_id::create("sedeleg");
+   sedeleg = uvml_riscv_csr_supervisor_trap_setup_sedeleg_reg_c#(XLEN)::type_id::create("sedeleg");
    sedeleg.configure(this);
    sedeleg.build();
    
-   sideleg = uvml_riscv_csr_supervisor_sideleg_reg_c#(XLEN)::type_id::create("sideleg");
+   sideleg = uvml_riscv_csr_supervisor_trap_setup_sideleg_reg_c#(XLEN)::type_id::create("sideleg");
    sideleg.configure(this);
    sideleg.build();
    
-   sie = uvml_riscv_csr_supervisor_sie_reg_c#(XLEN)::type_id::create("sie");
+   sie = uvml_riscv_csr_supervisor_trap_setup_sie_reg_c#(XLEN)::type_id::create("sie");
    sie.configure(this);
    sie.build();
    
-   stvec = uvml_riscv_csr_supervisor_stvec_reg_c#(XLEN)::type_id::create("stvec");
+   stvec = uvml_riscv_csr_supervisor_trap_setup_stvec_reg_c#(XLEN)::type_id::create("stvec");
    stvec.configure(this);
    stvec.build();
    
-   scounteren = uvml_riscv_csr_supervisor_scounteren_reg_c#(XLEN)::type_id::create("scounteren");
+   scounteren = uvml_riscv_csr_supervisor_trap_setup_scounteren_reg_c#(XLEN)::type_id::create("scounteren");
    scounteren.configure(this);
    scounteren.build();
    

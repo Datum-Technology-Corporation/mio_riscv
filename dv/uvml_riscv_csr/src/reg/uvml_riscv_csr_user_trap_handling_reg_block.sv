@@ -30,19 +30,19 @@ class uvml_riscv_csr_user_trap_handling_reg_block_c#(
 );
    
    // Registers
-   rand uvml_riscv_csr_user_trap_uscratch_reg_c#(XLEN)  uscratch; ///< Scratch register for user trap handlers.
-   rand uvml_riscv_csr_user_trap_uepc_reg_c    #(XLEN)  uepc    ; ///< User exception program counter.
-   rand uvml_riscv_csr_user_trap_ucause_reg_c  #(XLEN)  ucause  ; ///< User trap cause.
-   rand uvml_riscv_csr_user_trap_utval_reg_c   #(XLEN)  utval   ; ///< User bad address or instruction.
-   rand uvml_riscv_csr_user_trap_uip_reg_c     #(XLEN)  uip     ; ///< User interrupt pending.
+   //rand uvml_riscv_csr_user_trap_handling_uscratch_reg_c#(XLEN)  uscratch; ///< Scratch register for user trap handlers.
+   //rand uvml_riscv_csr_user_trap_handling_uepc_reg_c    #(XLEN)  uepc    ; ///< User exception program counter.
+   //rand uvml_riscv_csr_user_trap_handling_ucause_reg_c  #(XLEN)  ucause  ; ///< User trap cause.
+   //rand uvml_riscv_csr_user_trap_handling_utval_reg_c   #(XLEN)  utval   ; ///< User bad address or instruction.
+   //rand uvml_riscv_csr_user_trap_handling_uip_reg_c     #(XLEN)  uip     ; ///< User interrupt pending.
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_user_trap_handling_reg_block_c#(.XLEN(XLEN)))
-      `uvm_field_object(uscratch, UVM_DEFAULT)
-      `uvm_field_object(uepc    , UVM_DEFAULT)
-      `uvm_field_object(ucause  , UVM_DEFAULT)
-      `uvm_field_object(utval   , UVM_DEFAULT)
-      `uvm_field_object(uip     , UVM_DEFAULT)
+      //`uvm_field_object(uscratch, UVM_DEFAULT)
+      //`uvm_field_object(uepc    , UVM_DEFAULT)
+      //`uvm_field_object(ucause  , UVM_DEFAULT)
+      //`uvm_field_object(utval   , UVM_DEFAULT)
+      //`uvm_field_object(uip     , UVM_DEFAULT)
    `uvm_object_utils_end
    
    
@@ -90,25 +90,25 @@ endfunction : get_default_base_address
 
 function void uvml_riscv_csr_user_trap_handling_reg_block_c::create_regs();
    
-   uscratch = uvml_riscv_csr_user_trap_uscratch_reg_c#(XLEN)::type_id::create("uscratch");
-   uscratch.configure(this);
-   uscratch.build();
-   
-   uepc = uvml_riscv_csr_user_trap_uepc_reg_c#(XLEN)::type_id::create("uepc");
-   uepc.configure(this);
-   uepc.build();
-   
-   ucause = uvml_riscv_csr_user_trap_ucause_reg_c#(XLEN)::type_id::create("ucause");
-   ucause.configure(this);
-   ucause.build();
-   
-   utval = uvml_riscv_csr_user_trap_utval_reg_c#(XLEN)::type_id::create("utval");
-   utval.configure(this);
-   utval.build();
-   
-   uip = uvml_riscv_csr_user_trap_uip_reg_c#(XLEN)::type_id::create("uip");
-   uip.configure(this);
-   uip.build();
+   //uscratch = uvml_riscv_csr_user_trap_handling_uscratch_reg_c#(XLEN)::type_id::create("uscratch");
+   //uscratch.configure(this);
+   //uscratch.build();
+   //
+   //uepc = uvml_riscv_csr_user_trap_handling_uepc_reg_c#(XLEN)::type_id::create("uepc");
+   //uepc.configure(this);
+   //uepc.build();
+   //
+   //ucause = uvml_riscv_csr_user_trap_handling_ucause_reg_c#(XLEN)::type_id::create("ucause");
+   //ucause.configure(this);
+   //ucause.build();
+   //
+   //utval = uvml_riscv_csr_user_trap_handling_utval_reg_c#(XLEN)::type_id::create("utval");
+   //utval.configure(this);
+   //utval.build();
+   //
+   //uip = uvml_riscv_csr_user_trap_handling_uip_reg_c#(XLEN)::type_id::create("uip");
+   //uip.configure(this);
+   //uip.build();
    
 endfunction : create_regs
 
@@ -127,35 +127,35 @@ endfunction : create_reg_map
 
 function void uvml_riscv_csr_user_trap_handling_reg_block_c::add_regs_to_map();
    
-   default_map.add_reg(
-      .rg    (uscratch),
-      .offset(32'h00_00_00_00),
-      .rights("RW")
-   );
-   
-   default_map.add_reg(
-      .rg    (uepc),
-      .offset(32'h00_00_00_01),
-      .rights("RW")
-   );
-   
-   default_map.add_reg(
-      .rg    (ucause),
-      .offset(32'h00_00_00_02),
-      .rights("RW")
-   );
-   
-   default_map.add_reg(
-      .rg    (utval),
-      .offset(32'h00_00_00_03),
-      .rights("RW")
-   );
-   
-   default_map.add_reg(
-      .rg    (uip),
-      .offset(32'h00_00_00_04),
-      .rights("RW")
-   );
+   //default_map.add_reg(
+   //   .rg    (uscratch),
+   //   .offset(32'h00_00_00_00),
+   //   .rights("RW")
+   //);
+   //
+   //default_map.add_reg(
+   //   .rg    (uepc),
+   //   .offset(32'h00_00_00_01),
+   //   .rights("RW")
+   //);
+   //
+   //default_map.add_reg(
+   //   .rg    (ucause),
+   //   .offset(32'h00_00_00_02),
+   //   .rights("RW")
+   //);
+   //
+   //default_map.add_reg(
+   //   .rg    (utval),
+   //   .offset(32'h00_00_00_03),
+   //   .rights("RW")
+   //);
+   //
+   //default_map.add_reg(
+   //   .rg    (uip),
+   //   .offset(32'h00_00_00_04),
+   //   .rights("RW")
+   //);
    
 endfunction : add_regs_to_map
 

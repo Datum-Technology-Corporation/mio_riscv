@@ -30,15 +30,15 @@ class uvml_riscv_csr_user_trap_setup_reg_block_c#(
 );
    
    // Registers
-   rand uvml_riscv_csr_user_trap_setup_ustatus_reg_c#(XLEN)  ustatus; ///< User status register.
-   rand uvml_riscv_csr_user_trap_setup_uie_reg_c    #(XLEN)  uie    ; ///< User interrupt-enable register.
-   rand uvml_riscv_csr_user_trap_setup_utvec_reg_c  #(XLEN)  utvec  ; ///< User trap handler base address.
+   //rand uvml_riscv_csr_user_trap_setup_ustatus_reg_c#(XLEN)  ustatus; ///< User status register.
+   //rand uvml_riscv_csr_user_trap_setup_uie_reg_c    #(XLEN)  uie    ; ///< User interrupt-enable register.
+   //rand uvml_riscv_csr_user_trap_setup_utvec_reg_c  #(XLEN)  utvec  ; ///< User trap handler base address.
    
    
    `uvm_object_param_utils_begin(uvml_riscv_csr_user_trap_setup_reg_block_c#(.XLEN(XLEN)))
-      `uvm_field_object(ustatus, UVM_DEFAULT)
-      `uvm_field_object(uie    , UVM_DEFAULT)
-      `uvm_field_object(utvec  , UVM_DEFAULT)
+      //`uvm_field_object(ustatus, UVM_DEFAULT)
+      //`uvm_field_object(uie    , UVM_DEFAULT)
+      //`uvm_field_object(utvec  , UVM_DEFAULT)
    `uvm_object_utils_end
    
    
@@ -86,17 +86,17 @@ endfunction : get_default_base_address
 
 function void uvml_riscv_csr_user_trap_setup_reg_block_c::create_regs();
    
-   ustatus = uvml_riscv_csr_user_trap_setup_ustatus_reg_c#(XLEN)::type_id::create("ustatus");
-   ustatus.configure(this);
-   ustatus.build();
-   
-   uie = uvml_riscv_csr_user_trap_setup_uie_reg_c#(XLEN)::type_id::create("uie");
-   uie.configure(this);
-   uie.build();
-   
-   utvec = uvml_riscv_csr_user_trap_setup_utvec_reg_c#(XLEN)::type_id::create("utvec");
-   utvec.configure(this);
-   utvec.build();
+   //ustatus = uvml_riscv_csr_user_trap_setup_ustatus_reg_c#(XLEN)::type_id::create("ustatus");
+   //ustatus.configure(this);
+   //ustatus.build();
+   //
+   //uie = uvml_riscv_csr_user_trap_setup_uie_reg_c#(XLEN)::type_id::create("uie");
+   //uie.configure(this);
+   //uie.build();
+   //
+   //utvec = uvml_riscv_csr_user_trap_setup_utvec_reg_c#(XLEN)::type_id::create("utvec");
+   //utvec.configure(this);
+   //utvec.build();
    
 endfunction : create_regs
 
@@ -115,23 +115,23 @@ endfunction : create_reg_map
 
 function void uvml_riscv_csr_user_trap_setup_reg_block_c::add_regs_to_map();
    
-   default_map.add_reg(
-      .rg    (ustatus),
-      .offset(32'h00_00_00_00),
-      .rights("RW")
-   );
-   
-   default_map.add_reg(
-      .rg    (uie),
-      .offset(32'h00_00_00_04),
-      .rights("RW")
-   );
-   
-   default_map.add_reg(
-      .rg    (utvec),
-      .offset(32'h00_00_00_05),
-      .rights("RW")
-   );
+   //default_map.add_reg(
+   //   .rg    (ustatus),
+   //   .offset(32'h00_00_00_00),
+   //   .rights("RW")
+   //);
+   //
+   //default_map.add_reg(
+   //   .rg    (uie),
+   //   .offset(32'h00_00_00_04),
+   //   .rights("RW")
+   //);
+   //
+   //default_map.add_reg(
+   //   .rg    (utvec),
+   //   .offset(32'h00_00_00_05),
+   //   .rights("RW")
+   //);
    
 endfunction : add_regs_to_map
 
