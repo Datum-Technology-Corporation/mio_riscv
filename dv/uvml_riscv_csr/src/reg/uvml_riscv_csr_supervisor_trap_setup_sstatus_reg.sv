@@ -159,15 +159,15 @@ function void uvml_riscv_csr_supervisor_trap_setup_sstatus_reg_c::build();
    
    xs = uvml_ral_reg_field_c::type_id::create("xs");
    xs.configure(
-      .parent               (this),
-      .size                 (   2),
-      .lsb_pos              (  15),
-      .access               ("RW"),
-      .volatile             (   0),
-      .reset                (   0),
-      .has_reset            (   1),
-      .is_rand              (   1),
-      .individual_accessible(   1)
+      .parent                 (this),
+      .size                   (   2),
+      .lsb_pos                (  15),
+      .access                 ("RW"),
+      .volatile               (   0),
+      .reset                  (   0),
+      .has_reset              (   1),
+      .is_rand                (   1),
+      .individually_accessible(   1)
    );
    
    sum = uvml_ral_reg_field_c::type_id::create("sum");
