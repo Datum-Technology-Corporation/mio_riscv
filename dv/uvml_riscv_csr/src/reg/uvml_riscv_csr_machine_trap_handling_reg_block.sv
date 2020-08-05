@@ -90,23 +90,23 @@ endfunction : get_default_base_address
 
 function void uvml_riscv_csr_machine_trap_handling_reg_block_c::create_regs();
    
-   mscratch = uvml_riscv_csr_ml_xyz_reg_c#(XLEN)::type_id::create("mscratch");
+   mscratch = uvml_riscv_csr_machine_trap_handling_mscratch_reg_c#(XLEN)::type_id::create("mscratch");
    mscratch.configure(this);
    mscratch.build();
    
-   mepc = uvml_riscv_csr_ml_xyz_reg_c#(XLEN)::type_id::create("mepc");
+   mepc = uvml_riscv_csr_machine_trap_handling_mepc_reg_c#(XLEN)::type_id::create("mepc");
    mepc.configure(this);
    mepc.build();
    
-   mcause = uvml_riscv_csr_ml_xyz_reg_c#(XLEN)::type_id::create("mcause");
+   mcause = uvml_riscv_csr_machine_trap_handling_mcause_reg_c#(XLEN)::type_id::create("mcause");
    mcause.configure(this);
    mcause.build();
    
-   mtval = uvml_riscv_csr_ml_xyz_reg_c#(XLEN)::type_id::create("mtval");
+   mtval = uvml_riscv_csr_machine_trap_handling_mtval_reg_c#(XLEN)::type_id::create("mtval");
    mtval.configure(this);
    mtval.build();
    
-   mip = uvml_riscv_csr_ml_xyz_reg_c#(XLEN)::type_id::create("mip");
+   mip = uvml_riscv_csr_machine_trap_handling_mip_reg_c#(XLEN)::type_id::create("mip");
    mip.configure(this);
    mip.build();
    
