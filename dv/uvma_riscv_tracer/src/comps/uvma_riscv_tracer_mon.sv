@@ -124,7 +124,7 @@ task uvma_riscv_tracer_mon_c::run_phase(uvm_phase phase);
       
       begin
          forever begin
-            if (cfg.enabled) begin
+            wait (cfg.enabled) begin
                case (cntxt.reset_state)
                   UVMA_RISCV_TRACER_RESET_STATE_PRE_RESET : mon_pre_reset (phase);
                   UVMA_RISCV_TRACER_RESET_STATE_IN_RESET  : mon_in_reset  (phase);
@@ -142,7 +142,7 @@ task uvma_riscv_tracer_mon_c::observe_reset();
    
    // TODO Implement uvma_riscv_tracer_mon_c::observe_reset()
    //      Ex: forever begin
-   //             if (cfg.enabled) begin
+   //             wait (cfg.enabled) begin
    //                wait (cntxt.vif.reset_n === 0);
    //                cntxt.reset_state = UVMA_RISCV_TRACER_RESET_STATE_IN_RESET;
    //                wait (cntxt.vif.reset_n === 1);
