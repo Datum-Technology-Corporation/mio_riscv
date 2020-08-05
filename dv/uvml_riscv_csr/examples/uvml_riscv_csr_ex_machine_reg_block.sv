@@ -26,9 +26,7 @@
  */
 class uvml_riscv_csr_ex_machine_reg_block_c#(
    int unsigned XLEN = 32
-) extends uvml_riscv_csr_base_reg_block_c#(
-   .XLEN(XLEN)
-);
+) extends uvml_ral_reg_block_c;
    
    // Sub-Blocks
    rand uvml_riscv_csr_machine_information_reg_block_c      #(XLEN)  information      ;

@@ -26,9 +26,7 @@
  */
 class uvml_riscv_csr_ex_hypervisor_reg_block_c#(
    int unsigned XLEN = 32
-) extends uvml_riscv_csr_base_reg_block_c#(
-   .XLEN(XLEN)
-);
+) extends uvml_ral_reg_block_c;
    
    // Sub-Blocks
    // TODO Add sub-block(s)
