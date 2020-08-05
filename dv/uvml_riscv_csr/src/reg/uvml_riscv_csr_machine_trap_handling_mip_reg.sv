@@ -16,14 +16,14 @@
 // 
 
 
-`ifndef __UVML_RISCV_CSR_MACHINE_TRAP_HANDLING_MIE_REG_SV__
-`define __UVML_RISCV_CSR_MACHINE_TRAP_HANDLING_MIE_REG_SV__
+`ifndef __UVML_RISCV_CSR_MACHINE_TRAP_HANDLING_MIP_REG_SV__
+`define __UVML_RISCV_CSR_MACHINE_TRAP_HANDLING_MIP_REG_SV__
 
 
 /**
  * RISC-V Machine Interrupt Register.
  */
-class uvml_riscv_csr_machine_trap_handling_mie_reg_c#(
+class uvml_riscv_csr_machine_trap_handling_mip_reg_c#(
    int unsigned XLEN = 32
 ) extends uvml_riscv_csr_base_reg_c#(
    .XLEN(XLEN)
@@ -40,7 +40,7 @@ class uvml_riscv_csr_machine_trap_handling_mie_reg_c#(
    rand uvml_ral_reg_field_c  meip;
    
    
-   `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_handling_mie_reg_c#(.XLEN(XLEN)))
+   `uvm_object_param_utils_begin(uvml_riscv_csr_machine_trap_handling_mip_reg_c#(.XLEN(XLEN)))
       `uvm_field_object(usip, UVM_DEFAULT)
       `uvm_field_object(ssip, UVM_DEFAULT)
       `uvm_field_object(msip, UVM_DEFAULT)
@@ -56,24 +56,24 @@ class uvml_riscv_csr_machine_trap_handling_mie_reg_c#(
    /**
     * Default constructor.
     */
-   extern function new(string name="uvml_riscv_csr_machine_trap_handling_mie_reg", int unsigned n_bits=XLEN, int has_coverage=UVM_NO_COVERAGE);
+   extern function new(string name="uvml_riscv_csr_machine_trap_handling_mip_reg", int unsigned n_bits=XLEN, int has_coverage=UVM_NO_COVERAGE);
    
    /**
     * Create and configure register fields.
     */
    extern virtual function void build();
    
-endclass : uvml_riscv_csr_machine_trap_handling_mie_reg_c
+endclass : uvml_riscv_csr_machine_trap_handling_mip_reg_c
 
 
-function uvml_riscv_csr_machine_trap_handling_mie_reg_c::new(string name="uvml_riscv_csr_machine_trap_handling_mie_reg", int unsigned n_bits=XLEN, int has_coverage=UVM_NO_COVERAGE);
+function uvml_riscv_csr_machine_trap_handling_mip_reg_c::new(string name="uvml_riscv_csr_machine_trap_handling_mip_reg", int unsigned n_bits=XLEN, int has_coverage=UVM_NO_COVERAGE);
    
    super.new(name, n_bits, has_coverage);
    
 endfunction : new
 
 
-function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
+function void uvml_riscv_csr_machine_trap_handling_mip_reg_c::build();
    
    usip = uvml_ral_reg_field_c::type_id::create("usip");
    usip.configure(
@@ -195,4 +195,4 @@ function void uvml_riscv_csr_machine_trap_handling_mie_reg_c::build();
 endfunction: build
 
 
-`endif // __UVML_RISCV_CSR_MACHINE_TRAP_HANDLING_MIE_REG_SV__
+`endif // __UVML_RISCV_CSR_MACHINE_TRAP_HANDLING_MIP_REG_SV__
