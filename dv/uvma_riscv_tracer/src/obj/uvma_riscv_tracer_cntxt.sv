@@ -30,7 +30,7 @@ class uvma_riscv_tracer_cntxt_c extends uvm_object;
    virtual uvma_riscv_tracer_if  vif;
    
    // Integrals
-   uvma_riscv_tracer_reset_state_enum  reset_state = UVMA_RESET_STATE_PRE_RESET;
+   uvma_riscv_tracer_reset_state_enum  reset_state = UVMA_RISCV_TRACER_RESET_STATE_PRE_RESET;
    
    // Events
    uvm_event  sample_cfg_e;

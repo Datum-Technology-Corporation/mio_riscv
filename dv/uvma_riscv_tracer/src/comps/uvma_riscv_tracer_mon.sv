@@ -144,9 +144,9 @@ task uvma_riscv_tracer_mon_c::observe_reset();
    //      Ex: forever begin
    //             if (cfg.enabled) begin
    //                wait (cntxt.vif.reset_n === 0);
-   //                cntxt.reset_state = UVMA_RESET_STATE_IN_RESET;
+   //                cntxt.reset_state = UVMA_RISCV_TRACER_RESET_STATE_IN_RESET;
    //                wait (cntxt.vif.reset_n === 1);
-   //                cntxt.reset_state = UVMA_RESET_STATE_POST_RESET;
+   //                cntxt.reset_state = UVMA_RISCV_TRACER_RESET_STATE_POST_RESET;
    //             end
    //          end
    
